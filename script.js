@@ -3,12 +3,7 @@ function toggleMenu() {
   const navList = document.querySelector("nav ul");
   navList.classList.toggle("active");
 }
-const form = document.getElementById('contact-form');
-if (form) {
-  form.addEventListener('submit', function (e) {
-    
-  });
-}
+
 
 const fadeElements = document.querySelectorAll(".before-fade");
 
