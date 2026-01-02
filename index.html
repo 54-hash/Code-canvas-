@@ -4,86 +4,129 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Code Canvas</title>
+
+  
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <div class="logo">Code Canvas</div>
-    <nav>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <div class="mobile-toggle" onclick="toggleMenu()">☰</div>
-    </nav>
-  </header>
 
-  <main>
-    <section class="hero before-fade">
-      <h1>Bringing Ideas to Life with Code</h1>
-      <p>HTML • CSS • JavaScript</p>
-    </section>
+<header>
+  <div class="logo">Code Canvas</div>
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="mobile-toggle" onclick="toggleMenu()">☰</div>
+  </nav>
+</header>
 
-    <section id="about" class="before-fade">
-      <h2>About Me</h2>
-      <p> I'm a beginner web developer focused on building clean and responsive websites. I’m currently working with HTML, CSS, and JavaScript to create websites that look good and work well on all devices.</p>
-    </section>
+<main>
 
-    <section id="services" class="before-fade">
-      <h2>Services</h2>
-      <ul class="service-list">
-        <li>Custom Website Design (HTML, CSS)</li>
-        <li>Mobile-Friendly & Responsive Layouts</li>
-        <li>Landing Pages & Portfolios</li>
-        <li>Contact Forms & Basic Features</li>
-      
-      </ul>
-    </section>
+<section id="home" class="hero before-fade">
+  <h1>Web Developer</h1>
+  <p>I build clean, responsive websites using HTML, CSS & JavaScript</p>
+  <a href="#contact" class="cta-button">Hire Me</a>
+</section>
 
-    <section id="promo" class="promo before-fade">
-      <h2>Need a Website?</h2>
-      <p>I can create a clean, professional website for your business or idea. Whether it's a portfolio, landing page, or small business homepage, I can build and launch it online for you — fast and mobile-ready.</p>
-      <a href="#contact" class="cta-button">Work With Me</a>
-    </section>
+<section id="about" class="before-fade">
+  <h2>About Me</h2>
+  <p>
+    I’m a beginner web developer learning and building real projects with HTML, CSS, and JavaScript.
+    I focus on responsive layouts, clean structure, and practical websites that work on all devices.
+  </p>
+</section>
 
-    <section class="promo services-promo before-fade">
-      <h2>What You’ll Get</h2>
-      <ul class="service-list">
-        <li>✔️ Clean, modern design</li>
-        <li>✔️ Works on phones and PCs</li>
-        <li>✔️ Easy-to-use contact form</li>
-      </ul>
-    </section>
+<section id="services" class="before-fade">
+  <h2>Services</h2>
+  <div class="services-grid">
+    <div class="service-card">
+      <i class='bx bx-code'></i>
+      <h3>Website Development</h3>
+      <p>Modern, responsive websites built with clean code.</p>
+    </div>
+    <div class="service-card">
+      <i class='bx bx-mobile'></i>
+      <h3>Responsive Design</h3>
+      <p>Optimized for mobile, tablet, and desktop screens.</p>
+    </div>
+    <div class="service-card">
+      <i class='bx bx-envelope'></i>
+      <h3>Contact Forms</h3>
+      <p>Email and WhatsApp-ready contact forms.</p>
+    </div>
+  </div>
+</section>
 
-    <section id="contact" class="before-fade">
+<section id="projects" class="before-fade">
+  <h2>Projects</h2>
+
+  <div class="projects-grid">
+
+    <div class="project-card">
+      <h3>Restaurant Landing Page</h3>
+      <p>Responsive restaurant website with menu and contact section.</p>
+      <span>HTML • CSS</span>
+      <div class="project-links">
+        <a href="#" target="_blank">Live</a>
+        <a href="#" target="_blank">GitHub</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <h3>Personal Portfolio</h3>
+      <p>One-page portfolio website with smooth scrolling.</p>
+      <span>HTML • CSS • JS</span>
+      <div class="project-links">
+        <a href="#" target="_blank">Live</a>
+        <a href="#" target="_blank">GitHub</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <h3>Business Website</h3>
+      <p>Simple business site with services and contact form.</p>
+      <span>HTML • CSS • JS</span>
+      <div class="project-links">
+        <a href="#" target="_blank">Live</a>
+        <a href="#" target="_blank">GitHub</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="contact" class="before-fade">
   <h2>Contact Me</h2>
 
-  <form id="contact-form" action="https://formsubmit.co/d9339171@gmail.com" method="POST">
-    
-    <input type="hidden" name="_next" value="https://54-hash.github.io/Code-canvas-/thank-you.html">
-    
+  <form action="https://formsubmit.co/d9339171@gmail.com" method="POST">
     <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_next" value="https://54-hash.github.io/Code-canvas-/thank-you.html">
 
-    <input type="text" name="name" placeholder="Your Name" required />
-    <input type="email" name="email" placeholder="Your Email" required />
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
     <textarea name="message" placeholder="Your Message" required></textarea>
     <button type="submit">Send Message</button>
   </form>
 
   <div class="contact-info">
-    <h3>Or reach me directly:</h3>
-    <p>📞 <a href="tel:+2348063555721">0806 355 5721</a> / <a href="tel:+2349012800640">0901 280 0640</a></p>
-    <p>💬 <a href="https://wa.me/2348063555721" target="_blank">WhatsApp Chat</a></p>
+    <p>📞 <a href="tel:+2348063555721">0806 355 5721</a></p>
+    <p>💬 <a href="https://wa.me/2348063555721" target="_blank">WhatsApp</a></p>
+    <p>🐙 <a href="https://github.com/54-hash" target="_blank">GitHub</a></p>
   </div>
 </section>
-  </main>
 
-  <footer>
-    <p>&copy; 2025 Code Canvas. Built by Me. All rights reserved.</p>
-  </footer>
+</main>
 
-  <script src="script.js"></script>
+<footer>
+  <p>© 2025 Code Canvas</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
