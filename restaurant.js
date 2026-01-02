@@ -1,14 +1,8 @@
-// Toggle mobile nav menu
-function toggleMenu() {
-  const navList = document.querySelector("nav ul");
-  navList.classList.toggle("active");
-}
-
-// Optional: Smooth scroll for nav links
-document.querySelectorAll('nav a').forEach(link => {
-  link.addEventListener('click', function(e) {
+// Smooth scroll for nav links
+document.querySelectorAll('header nav a').forEach(link => {
+  link.addEventListener('click', e => {
     e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
+    const target = document.querySelector(link.getAttribute('href'));
     target.scrollIntoView({ behavior: 'smooth' });
   });
 });
