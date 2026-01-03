@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Code Canvas</title>
 
-  <!-- Boxicons for icons -->
+  <!-- Boxicons CDN for icons -->
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 
   <!-- Main CSS -->
@@ -16,14 +16,15 @@
 <header>
   <div class="logo">Code Canvas</div>
   <nav>
-    <ul class="nav-links">
+    <ul>
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#projects">Projects</a></li>
+      <li><a href="portfolio.html" target="_blank">Portfolio</a></li> <!-- Portfolio Link -->
       <li><a href="#contact">Contact</a></li>
     </ul>
-    <div class="menu-toggle">☰</div>
+    <div class="mobile-toggle" onclick="toggleMenu()">☰</div>
   </nav>
 </header>
 
@@ -40,9 +41,10 @@
   <section id="about" class="before-fade">
     <h2>About Me</h2>
     <p>
-      I’m a beginner web developer learning and building real projects with HTML, CSS, and JavaScript.
-      I focus on responsive layouts, clean structure, and practical websites that work on all devices.
+      I’m a 100-level university student passionate about web development.
+      I focus on clean, responsive layouts and practical websites that work on all devices.
     </p>
+    <p>Skills: HTML • CSS • JavaScript</p>
   </section>
 
   <!-- Services Section -->
@@ -72,8 +74,9 @@
     <h2>My Projects</h2>
     <div class="project-grid">
 
-      <!-- Restaurant Project -->
+      <!-- Project 1: Restaurant -->
       <div class="project-card">
+        <img src="restaurant-screenshot.png" alt="Restaurant Project Screenshot">
         <h3>Restaurant Landing Page</h3>
         <p>Responsive restaurant site with menu, contact info, and smooth scrolling.</p>
         <p class="tech">HTML • CSS • JS</p>
@@ -82,24 +85,25 @@
         </div>
       </div>
 
-      <!-- To-Do List Project -->
+      <!-- Project 2: Portfolio -->
       <div class="project-card">
-        <h3>To-Do List App</h3>
-        <p>Simple task manager with add/delete functionality — pure JS.</p>
+        <img src="portfolio-screenshot.png" alt="Portfolio Screenshot">
+        <h3>My Personal Portfolio</h3>
+        <p>Interactive portfolio showing my skills, projects, and contact info.</p>
         <p class="tech">HTML • CSS • JS</p>
         <div class="project-links">
-          <a href="todo.html" target="_blank" class="btn">Live Demo</a>
-          <a href="https://github.com/54-hash/todo" target="_blank" class="btn">View Code</a>
+          <a href="portfolio.html" target="_blank" class="btn">Live Demo</a>
         </div>
       </div>
 
-      <!-- Placeholder Project -->
+      <!-- Project 3: To-Do App -->
       <div class="project-card">
-        <h3>Portfolio Site Example</h3>
-        <p>Practice project showing layout, typography, and responsive design.</p>
-        <p class="tech">HTML • CSS</p>
+        <img src="todo-screenshot.png" alt="To-Do App Screenshot">
+        <h3>To-Do List App</h3>
+        <p>Simple interactive JS to-do list for practice projects.</p>
+        <p class="tech">HTML • CSS • JS</p>
         <div class="project-links">
-          <a href="#" target="_blank" class="btn">Live Demo</a>
+          <a href="todo.html" target="_blank" class="btn">Live Demo</a>
         </div>
       </div>
 
@@ -135,13 +139,5 @@
 
 <!-- Main JS -->
 <script src="script.js"></script>
-<script>
-  // Navbar toggle
-  const toggle = document.querySelector(".menu-toggle");
-  const navLinks = document.querySelector(".nav-links");
-  toggle.addEventListener("click", () => {
-    navLinks.classList.toggle("show");
-  });
-</script>
 </body>
 </html>
