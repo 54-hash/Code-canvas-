@@ -1,11 +1,12 @@
-/* NAVBAR */
+
+
+/* NAVBAR TOGGLE */
 const toggle = document.querySelector(".menu-toggle");
 const navLinks = document.querySelector(".nav-links");
 
 toggle.addEventListener("click", () => {
   navLinks.classList.toggle("show");
 });
-
 /* WHATSAPP */
 document.querySelectorAll(".order-btn").forEach(btn => {
   btn.addEventListener("click", () => {
