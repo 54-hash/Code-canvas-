@@ -3,75 +3,109 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Restaurant Landing Page</title>
+  <title>Tasty Bites Restaurant</title>
+
   <link rel="stylesheet" href="restaurant.css">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Header / Navbar -->
-  <header>
-    <div class="logo">TastyBites</div>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#menu">Menu</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="logo">🍽️ Tasty Bites</div>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <h1>Welcome to TastyBites</h1>
-    <p>Delicious meals made with love</p>
-    <a href="#menu" class="cta-button">View Menu</a>
-  </section>
+  <div class="menu-toggle">☰</div>
 
-  <!-- Menu Section -->
-  <section id="menu">
-    <h2>Our Menu</h2>
-    <div class="menu-grid">
-      <div class="menu-item">
-        <img src="images/pizza.jpg" alt="Pizza">
-        <h3>Margherita Pizza</h3>
-        <p>Classic pizza with fresh mozzarella and basil.</p>
-      </div>
-      <div class="menu-item">
-        <img src="images/burger.jpg" alt="Burger">
-        <h3>Cheeseburger</h3>
-        <p>Juicy beef patty with cheddar, lettuce, and tomato.</p>
-      </div>
-      <div class="menu-item">
-        <img src="images/drinks.jpg" alt="Drinks">
-        <h3>Refreshing Drinks</h3>
-        <p>Cold beverages to complement your meal.</p>
-      </div>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#about">About</a></li>
+    <li><button class="order-btn">Order</button></li>
+  </ul>
+</header>
+
+<!-- HERO -->
+<section id="home" class="hero fade-in">
+  <h1>Delicious Meals, Made Fresh</h1>
+  <p>Quality food, fast delivery, great taste.</p>
+  <button class="order-btn">Order on WhatsApp</button>
+</section>
+
+<!-- SLIDER -->
+<section class="slider fade-in">
+  <img src="food1.jpg" class="slide">
+  <img src="food2.jpg" class="slide">
+  <img src="drink1.jpg" class="slide">
+</section>
+
+<!-- MENU -->
+<section id="menu" class="menu-section fade-in">
+  <h2>Our Menu</h2>
+
+  <div class="menu-buttons">
+    <button id="food-btn" class="active">Food</button>
+    <button id="drinks-btn">Drinks</button>
+  </div>
+
+  <!-- FOOD MENU -->
+  <div id="food-menu" class="menu-grid">
+    <div class="menu-card">
+      <img src="jollof.jpg" alt="Jollof Rice & Chicken">
+      <h3>Jollof Rice & Chicken</h3>
+      <p>Smoky Nigerian jollof with grilled chicken</p>
+      <p>₦3,500</p>
     </div>
-  </section>
+    <div class="menu-card">
+      <img src="burger.jpg" alt="Beef Burger & Fries">
+      <h3>Burger & Fries</h3>
+      <p>Juicy beef burger with crispy fries</p>
+      <p>₦2,800</p>
+    </div>
+    <div class="menu-card">
+      <img src="spaghetti.jpg" alt="Spaghetti">
+      <h3>Spaghetti</h3>
+      <p>Rich tomato sauce with herbs</p>
+      <p>₦2,000</p>
+    </div>
+  </div>
 
-  <!-- About Section -->
-  <section id="about">
-    <h2>About Us</h2>
-    <p>We are passionate about creating delicious meals in a cozy atmosphere. Fresh ingredients, friendly staff, and a menu you’ll love.</p>
-    <img src="images/restaurant-interior.jpg" alt="Restaurant Interior">
-  </section>
+  <!-- DRINKS MENU -->
+  <div id="drinks-menu" class="menu-grid" style="display:none;">
+    <div class="menu-card">
+      <img src="juice.jpg" alt="Fruit Juice">
+      <h3>Fruit Juice</h3>
+      <p>Freshly blended fruits</p>
+      <p>₦1,200</p>
+    </div>
+    <div class="menu-card">
+      <img src="smoothie.jpg" alt="Smoothies">
+      <h3>Smoothies</h3>
+      <p>Healthy and refreshing</p>
+      <p>₦1,500</p>
+    </div>
+    <div class="menu-card">
+      <img src="softdrink.jpg" alt="Soft Drinks">
+      <h3>Soft Drinks</h3>
+      <p>Chilled beverages</p>
+      <p>₦800</p>
+    </div>
+  </div>
+</section>
 
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
+<!-- ABOUT -->
+<section id="about" class="about fade-in">
+  <h2>About Us</h2>
+  <p>
+    Tasty Bites is a modern restaurant serving freshly prepared meals
+    with quality ingredients and fast service.
+  </p>
+</section>
 
-  <footer>
-    <p>© 2025 TastyBites</p>
-  </footer>
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 Tasty Bites Restaurant</p>
+</footer>
 
-  <script src="restaurant.js"></script>
+<script src="restaurant.js"></script>
 </body>
 </html>
