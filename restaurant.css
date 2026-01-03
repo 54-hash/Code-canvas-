@@ -159,10 +159,16 @@ footer {
     background: #c62828;
     flex-direction: column;
     width: 200px;
-    display: none;
+    display: none; /* hidden by default */
+    z-index: 1000;
   }
 
   .nav-links.show {
-    display: flex;
+    display: flex; /* show when toggled */
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+    text-align: center;
   }
 }
