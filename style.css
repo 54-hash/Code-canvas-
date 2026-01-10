@@ -251,3 +251,40 @@ footer .contact-info a:hover {
     display: block;
   }
 }
+
+.contact-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.6rem;
+  margin-top: 2.5rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.3rem 1.6rem;
+  border-radius: 16px;
+  text-decoration: none;
+  font-weight: 600;
+  background: rgba(255, 0, 0, 0.08);
+  border: 1px solid rgba(255, 0, 0, 0.4);
+  color: #ff2b2b;
+  box-shadow: 0 0 30px rgba(255, 0, 0, 0.35);
+  transition: all 0.35s ease;
+}
+
+.contact-item i {
+  font-size: 2rem;
+}
+
+.contact-item:hover {
+  transform: translateY(-8px) scale(1.04);
+  box-shadow: 0 0 55px rgba(255, 0, 0, 0.8);
+  background: rgba(255, 0, 0, 0.18);
+}
+
+/* Subtle variation */
+.contact-item.gmail { color: #ff3b3b; }
+.contact-item.phone { color: #ff5555; }
+.contact-item.whatsapp { color: #ff1f1f; }
