@@ -242,35 +242,48 @@ footer {
   margin-top: 0.5rem;
 }
 
+
 footer {
-  background-color: #111; 
+  background-color: #111; /* dark footer */
   color: #fff;
   text-align: center;
   padding: 20px 10px;
 }
 
 footer p {
-  margin: 0;
-  font-size: 1.1rem; 
+  margin: 0 0 10px 0;
+  font-size: 1.1rem;
 }
 
 footer .contact-info {
-  margin-top: 10px;
   display: flex;
   justify-content: center;
-  gap: 25px; 
+  gap: 25px;
   flex-wrap: wrap;
 }
 
 footer .contact-info a {
-  color: #ff0000; 
-  font-size: 1.2rem; 
-  text-decoration: none;
+  font-size: 1.3rem;  /* bigger link */
   font-weight: bold;
+  text-decoration: none;
   transition: transform 0.2s ease, color 0.2s ease;
 }
 
+
+footer .contact-info a[href^="tel"] {
+  color: #4CAF50; 
+}
+
+footer .contact-info a[href*="wa.me"] {
+  color: #25D366; 
+}
+
+footer .contact-info a[href*="github.com"] {
+  color: #6cc644; 
+}
+
+
 footer .contact-info a:hover {
-  color: #fff; 
-  transform: scale(1.2); 
+  transform: scale(1.2);
+  color: #ff0000; /* turn red on hover */
 }
