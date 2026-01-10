@@ -5,10 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Code Canvas</title>
 
-  
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-
-  
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -21,7 +18,7 @@
       <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#projects">Projects</a></li>
-      <li><a href="portfolio.html" target="_blank">Portfolio</a></li> <!-- Portfolio Link -->
+      <li><a href="portfolio.html">Portfolio</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
     <div class="mobile-toggle" onclick="toggleMenu()">☰</div>
@@ -30,115 +27,79 @@
 
 <main>
 
+<section id="home" class="hero before-fade">
+  <h1>Web Developer</h1>
+  <p>Building futuristic, responsive websites with clean code</p>
+  <a href="#contact" class="cta-button">Hire Me</a>
+</section>
 
-  <section id="home" class="hero before-fade">
-    <h1>Web Developer</h1>
-    <p>I build clean, responsive websites using HTML, CSS & JavaScript</p>
-    <a href="#contact" class="cta-button">Hire Me</a>
-  </section>
+<section id="about" class="before-fade">
+  <h2>About Me</h2>
+  <p>
+    100-level university student focused on building sleek, interactive web experiences.
+    I specialize in modern layouts, animations, and responsive design.
+  </p>
+  <p class="skills">HTML • CSS • JavaScript</p>
+</section>
 
-  
-  <section id="about" class="before-fade">
-    <h2>About Me</h2>
-    <p>
-      I’m a 100-level university student passionate about web development.
-      I focus on clean, responsive layouts and practical websites that work on all devices.
-    </p>
-    <p>Skills: HTML • CSS • JavaScript</p>
-  </section>
-
-  
-  <section id="services" class="before-fade">
-    <h2>Services</h2>
-    <div class="services-grid">
-      <div class="service-card">
-        <i class='bx bx-code'></i>
-        <h3>Website Development</h3>
-        <p>Modern, responsive websites built with clean code.</p>
-      </div>
-      <div class="service-card">
-        <i class='bx bx-mobile'></i>
-        <h3>Responsive Design</h3>
-        <p>Optimized for mobile, tablet, and desktop screens.</p>
-      </div>
-      <div class="service-card">
-        <i class='bx bx-envelope'></i>
-        <h3>Contact Forms</h3>
-        <p>Email and WhatsApp-ready contact forms.</p>
-      </div>
+<section id="services" class="before-fade">
+  <h2>Services</h2>
+  <div class="services-grid">
+    <div class="service-card">
+      <i class='bx bx-code'></i>
+      <h3>Website Development</h3>
+      <p>Fast, modern, responsive websites.</p>
     </div>
-  </section>
-
-  
-  <section id="projects" class="before-fade">
-    <h2>My Projects</h2>
-    <div class="project-grid">
-
-      
-      <div class="project-card">
-        
-        <h3>Restaurant Landing Page</h3>
-        <p>Responsive restaurant site with menu, contact info, and smooth scrolling.</p>
-        <p class="tech">HTML • CSS • JS</p>
-        <div class="project-links">
-          <a href="restaurant.html" target="_blank" class="btn">Live Demo</a>
-        </div>
-      </div>
-
-      
-      <div class="project-card">
-        
-        <h3>My Personal Portfolio</h3>
-        <p>Interactive portfolio showing my skills, projects, and contact info.</p>
-        <p class="tech">HTML • CSS • JS</p>
-        <div class="project-links">
-          <a href="portfolio.html" target="_blank" class="btn">Live Demo</a>
-        </div>
-      </div>
-
-      
-      <div class="project-card">
-        
-        <h3>To-Do List App</h3>
-        <p>Simple interactive JS to-do list for practice projects.</p>
-        <p class="tech">HTML • CSS • JS</p>
-        <div class="project-links">
-          <a href="todo.html" target="_blank" class="btn">Live Demo</a>
-        </div>
-      </div>
-
+    <div class="service-card">
+      <i class='bx bx-mobile'></i>
+      <h3>Responsive Design</h3>
+      <p>Mobile-first layouts that adapt perfectly.</p>
     </div>
-  </section>
-
-  
-  <section id="contact" class="before-fade">
-    <h2>Contact Me</h2>
-
-    <form action="https://formsubmit.co/d9339171@gmail.com" method="POST">
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_next" value="https://54-hash.github.io/Code-canvas-/thank-you.html">
-
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-
-    <div class="contact-info">
-      <p>📞 <a href="tel:+2348063555721">0806 355 5721</a></p>
-      <p>💬 <a href="https://wa.me/2348063555721" target="_blank">WhatsApp</a></p>
-      <p>🐙 <a href="https://github.com/54-hash" target="_blank">GitHub</a></p>
+    <div class="service-card">
+      <i class='bx bx-envelope'></i>
+      <h3>Contact Forms</h3>
+      <p>Email & WhatsApp integrations.</p>
     </div>
-  </section>
+  </div>
+</section>
+
+<section id="projects" class="before-fade">
+  <h2>Projects</h2>
+  <div class="project-grid">
+    <div class="project-card">
+      <h3>Restaurant Website</h3>
+      <p>Modern restaurant landing page.</p>
+      <a href="restaurant.html" class="btn">Live Demo</a>
+    </div>
+    <div class="project-card">
+      <h3>Portfolio</h3>
+      <p>Interactive personal portfolio.</p>
+      <a href="portfolio.html" class="btn">Live Demo</a>
+    </div>
+    <div class="project-card">
+      <h3>To-Do App</h3>
+      <p>Pure JavaScript task manager.</p>
+      <a href="todo.html" class="btn">Live Demo</a>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="before-fade">
+  <h2>Contact</h2>
+  <p>Let’s build something powerful.</p>
+  <div class="contact-links">
+    <a href="tel:+2348063555721">📞 Call</a>
+    <a href="https://wa.me/2348063555721">💬 WhatsApp</a>
+    <a href="https://github.com/54-hash">🐙 GitHub</a>
+  </div>
+</section>
 
 </main>
 
 <footer>
-  <p>© 2025 Code Canvas</p>
+  <p>© 2026 Code Canvas</p>
 </footer>
-
 
 <script src="script.js"></script>
 </body>
 </html>
-
