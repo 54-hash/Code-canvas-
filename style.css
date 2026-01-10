@@ -340,3 +340,7 @@ footer .contact-info a:hover {
   background: rgba(255, 0, 0, 0.12);
   border-color: #ff2b2b;
 }
+
+.contact-card::before {
+  pointer-events: none;
+}
