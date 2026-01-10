@@ -241,3 +241,36 @@ footer {
   margin-right: 0.5rem;
   margin-top: 0.5rem;
 }
+
+footer {
+  background-color: #111; 
+  color: #fff;
+  text-align: center;
+  padding: 20px 10px;
+}
+
+footer p {
+  margin: 0;
+  font-size: 1.1rem; 
+}
+
+footer .contact-info {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 25px; 
+  flex-wrap: wrap;
+}
+
+footer .contact-info a {
+  color: #ff0000; 
+  font-size: 1.2rem; 
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+footer .contact-info a:hover {
+  color: #fff; 
+  transform: scale(1.2); 
+}
