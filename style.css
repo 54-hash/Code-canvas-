@@ -7,8 +7,6 @@
   --card: rgba(255, 255, 255, 0.04);
   --border: rgba(255, 255, 255, 0.08);
   --blur: blur(14px);
-  --red: #ff2b2b;
-  --red-soft: rgba(255, 0, 0, 0.25);
 }
 
 /* RESET */
@@ -90,12 +88,12 @@ main {
 .hero {
   position: relative;
   text-align: center;
-  overflow: hidden;
   height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  overflow: hidden;
   color: var(--neon);
 }
 
@@ -103,7 +101,7 @@ main {
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: linear-gradient(120deg, rgba(0,0,0,0.8), rgba(0,255,153,0.15));
+  background: linear-gradient(120deg, rgba(0,0,0,0.85), rgba(0,255,153,0.12));
   z-index: 1;
 }
 
@@ -114,7 +112,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.8rem; /* spacing between heading, paragraph, button */
+  gap: 1.8rem;
   animation: fadeInUp 1.2s ease forwards;
 }
 
@@ -137,12 +135,10 @@ main {
   background: transparent;
   border: 1px solid var(--neon);
   color: var(--neon);
-  text-decoration: none;
   font-weight: 600;
+  text-decoration: none;
   box-shadow: 0 0 25px var(--neon-soft);
   transition: all 0.3s ease;
-  z-index: 2;
-  position: relative;
 }
 
 .cta-button:hover {
@@ -151,7 +147,6 @@ main {
   transform: translateY(-3px);
 }
 
-/* Floating hero image */
 .hero-img {
   position: absolute;
   bottom: 0;
@@ -168,18 +163,6 @@ main {
   height: auto;
   border-radius: 10px;
   box-shadow: 0 0 20px var(--neon), 0 0 40px var(--neon);
-}
-
-/* Floating Animation */
-@keyframes float {
-  0%, 100% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-20px) rotate(-2deg); }
-}
-
-/* Fade In Animation */
-@keyframes fadeInUp {
-  0% { opacity: 0; transform: translateY(30px); }
-  100% { opacity: 1; transform: translateY(0); }
 }
 
 /* SECTIONS */
@@ -267,8 +250,8 @@ section h2 {
 .contact-title {
   font-size: 2.6rem;
   margin-bottom: 0.5rem;
-  color: var(--red);
-  text-shadow: 0 0 25px var(--red-soft);
+  color: #ff2b2b;
+  text-shadow: 0 0 25px rgba(255, 0, 0, 0.6);
 }
 
 .contact-subtitle {
@@ -316,7 +299,7 @@ section h2 {
 .contact-card i {
   font-size: 3.2rem;
   margin-bottom: 1rem;
-  color: var(--red);
+  color: #ff2b2b;
 }
 
 .contact-card h4 {
@@ -325,7 +308,7 @@ section h2 {
 }
 
 .contact-card a {
-  color: var(--red);
+  color: #ff5a5a;
   text-decoration: none;
   font-weight: 600;
   word-break: break-word;
@@ -335,41 +318,15 @@ section h2 {
   text-decoration: underline;
 }
 
-/* FOOTER */
-footer {
-  border-top: 1px solid var(--border);
-  padding: 2rem;
-  text-align: center;
-  background: rgba(0,0,0,0.5);
+/* FLOATING & FADE ANIMATIONS */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(-2deg); }
 }
 
-footer .contact-info {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 1rem;
-}
-
-footer .contact-info a {
-  font-size: 1.4rem;
-  transition: transform 0.25s, text-shadow 0.25s;
-}
-
-footer .contact-info a:hover {
-  transform: scale(1.2);
-  text-shadow: 0 0 12px var(--neon);
-}
-
-/* ANIMATIONS */
-.before-fade {
-  opacity: 0;
-  transform: translateY(40px);
-}
-
-.fade-in {
-  opacity: 1;
-  transform: translateY(0);
-  transition: 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
 /* MOBILE */
@@ -396,4 +353,29 @@ footer .contact-info a:hover {
     right: 50%;
     transform: translateX(50%);
   }
+
+  .cta-button {
+    padding: 0.7rem 1.4rem;
+    font-size: 0.95rem;
+  }
+
+  .hero h1 {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+  }
 }
+
+/* FADE-IN FOR ALL SECTIONS */
+.before-fade {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+  transition: 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+  }
