@@ -7,6 +7,8 @@
   --card: rgba(255, 255, 255, 0.04);
   --border: rgba(255, 255, 255, 0.08);
   --blur: blur(14px);
+  --red: #ff2b2b;
+  --red-soft: rgba(255, 0, 0, 0.25);
 }
 
 /* RESET */
@@ -84,17 +86,17 @@ main {
   padding: 7rem 2rem 3rem;
 }
 
-/* HERO SECTION */
+/* HERO */
 .hero {
   position: relative;
-  min-height: 90vh;
+  text-align: center;
+  overflow: hidden;
+  height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  text-align: center;
   color: var(--neon);
-  overflow: hidden;
 }
 
 .hero-overlay {
@@ -109,6 +111,10 @@ main {
   position: relative;
   z-index: 2;
   max-width: 700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.8rem; /* spacing between heading, paragraph, button */
   animation: fadeInUp 1.2s ease forwards;
 }
 
@@ -122,9 +128,30 @@ main {
 .hero p {
   max-width: 600px;
   opacity: 0.85;
-  margin-top: 1rem;
+  margin: 0;
 }
 
+.cta-button {
+  padding: 0.9rem 1.8rem;
+  border-radius: 12px;
+  background: transparent;
+  border: 1px solid var(--neon);
+  color: var(--neon);
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 0 25px var(--neon-soft);
+  transition: all 0.3s ease;
+  z-index: 2;
+  position: relative;
+}
+
+.cta-button:hover {
+  background: var(--neon);
+  color: #000;
+  transform: translateY(-3px);
+}
+
+/* Floating hero image */
 .hero-img {
   position: absolute;
   bottom: 0;
@@ -143,12 +170,13 @@ main {
   box-shadow: 0 0 20px var(--neon), 0 0 40px var(--neon);
 }
 
-/* FLOATING ANIMATION */
+/* Floating Animation */
 @keyframes float {
   0%, 100% { transform: translateY(0px) rotate(0deg); }
   50% { transform: translateY(-20px) rotate(-2deg); }
 }
 
+/* Fade In Animation */
 @keyframes fadeInUp {
   0% { opacity: 0; transform: translateY(30px); }
   100% { opacity: 1; transform: translateY(0); }
@@ -190,7 +218,12 @@ section h2 {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(120deg, transparent, var(--neon-soft), transparent);
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(0, 255, 156, 0.15),
+    transparent
+  );
   opacity: 0;
   transition: opacity 0.4s;
 }
@@ -212,31 +245,11 @@ section h2 {
   margin-bottom: 0.6rem;
 }
 
-/* PROJECT BUTTONS */
+/* PROJECT BUTTON */
 .btn {
   color: var(--neon);
   text-decoration: none;
   font-weight: 600;
-}
-
-/* CTA BUTTON */
-.cta-button {
-  margin-top: 2rem;
-  padding: 0.8rem 1.6rem;
-  border-radius: 12px;
-  background: transparent;
-  border: 1px solid var(--neon);
-  color: var(--neon);
-  text-decoration: none;
-  font-weight: 600;
-  box-shadow: 0 0 25px var(--neon-soft);
-  transition: all 0.3s ease;
-}
-
-.cta-button:hover {
-  background: var(--neon);
-  color: #000;
-  transform: translateY(-3px);
 }
 
 /* CONTACT SECTION */
@@ -254,8 +267,8 @@ section h2 {
 .contact-title {
   font-size: 2.6rem;
   margin-bottom: 0.5rem;
-  color: #ff2b2b;
-  text-shadow: 0 0 25px rgba(255, 0, 0, 0.6);
+  color: var(--red);
+  text-shadow: 0 0 25px var(--red-soft);
 }
 
 .contact-subtitle {
@@ -266,9 +279,8 @@ section h2 {
 }
 
 .contact-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 2.5rem;
 }
 
@@ -281,7 +293,6 @@ section h2 {
   transition: all 0.4s ease;
   position: relative;
   overflow: hidden;
-  min-width: 260px;
 }
 
 .contact-card::before {
@@ -291,7 +302,6 @@ section h2 {
   background: linear-gradient(120deg, transparent, rgba(255,0,0,0.15), transparent);
   opacity: 0;
   transition: opacity 0.4s ease;
-  pointer-events: none;
 }
 
 .contact-card:hover::before {
@@ -306,7 +316,7 @@ section h2 {
 .contact-card i {
   font-size: 3.2rem;
   margin-bottom: 1rem;
-  color: #ff2b2b;
+  color: var(--red);
 }
 
 .contact-card h4 {
@@ -315,7 +325,7 @@ section h2 {
 }
 
 .contact-card a {
-  color: #ff5a5a;
+  color: var(--red);
   text-decoration: none;
   font-weight: 600;
   word-break: break-word;
@@ -323,6 +333,31 @@ section h2 {
 
 .contact-card a:hover {
   text-decoration: underline;
+}
+
+/* FOOTER */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 2rem;
+  text-align: center;
+  background: rgba(0,0,0,0.5);
+}
+
+footer .contact-info {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 1rem;
+}
+
+footer .contact-info a {
+  font-size: 1.4rem;
+  transition: transform 0.25s, text-shadow 0.25s;
+}
+
+footer .contact-info a:hover {
+  transform: scale(1.2);
+  text-shadow: 0 0 12px var(--neon);
 }
 
 /* ANIMATIONS */
@@ -355,8 +390,10 @@ section h2 {
     display: block;
   }
 
-  .contact-cards {
-    flex-direction: column;
-    gap: 1.5rem;
+  .hero-img {
+    bottom: -20px;
+    width: 60%;
+    right: 50%;
+    transform: translateX(50%);
   }
-    }
+}
