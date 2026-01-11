@@ -84,14 +84,32 @@ main {
   padding: 7rem 2rem 3rem;
 }
 
-/* HERO */
+/* HERO SECTION */
 .hero {
-  min-height: 80vh;
+  position: relative;
+  min-height: 90vh;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   text-align: center;
+  color: var(--neon);
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(120deg, rgba(0,0,0,0.8), rgba(0,255,153,0.15));
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  animation: fadeInUp 1.2s ease forwards;
 }
 
 .hero h1 {
@@ -107,23 +125,33 @@ main {
   margin-top: 1rem;
 }
 
-.cta-button {
-  margin-top: 2rem;
-  padding: 0.8rem 1.6rem;
-  border-radius: 12px;
-  background: transparent;
-  border: 1px solid var(--neon);
-  color: var(--neon);
-  text-decoration: none;
-  font-weight: 600;
-  box-shadow: 0 0 25px var(--neon-soft);
-  transition: all 0.3s ease;
+.hero-img {
+  position: absolute;
+  bottom: 0;
+  right: 10%;
+  max-width: 400px;
+  width: 35%;
+  animation: float 6s ease-in-out infinite;
+  z-index: 0;
+  opacity: 0.9;
 }
 
-.cta-button:hover {
-  background: var(--neon);
-  color: #000;
-  transform: translateY(-3px);
+.hero-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 20px var(--neon), 0 0 40px var(--neon);
+}
+
+/* FLOATING ANIMATION */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(-2deg); }
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
 /* SECTIONS */
@@ -162,12 +190,7 @@ section h2 {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    120deg,
-    transparent,
-    rgba(0, 255, 156, 0.15),
-    transparent
-  );
+  background: linear-gradient(120deg, transparent, var(--neon-soft), transparent);
   opacity: 0;
   transition: opacity 0.4s;
 }
@@ -189,67 +212,31 @@ section h2 {
   margin-bottom: 0.6rem;
 }
 
-/* PROJECT BUTTON */
+/* PROJECT BUTTONS */
 .btn {
   color: var(--neon);
   text-decoration: none;
   font-weight: 600;
 }
 
-/* FOOTER */
-footer {
-  border-top: 1px solid var(--border);
-  padding: 2rem;
-  text-align: center;
-  background: rgba(0,0,0,0.5);
+/* CTA BUTTON */
+.cta-button {
+  margin-top: 2rem;
+  padding: 0.8rem 1.6rem;
+  border-radius: 12px;
+  background: transparent;
+  border: 1px solid var(--neon);
+  color: var(--neon);
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 0 25px var(--neon-soft);
+  transition: all 0.3s ease;
 }
 
-footer .contact-info {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-top: 1rem;
-}
-
-footer .contact-info a {
-  font-size: 1.4rem;
-  transition: transform 0.25s, text-shadow 0.25s;
-}
-
-footer .contact-info a:hover {
-  transform: scale(1.2);
-  text-shadow: 0 0 12px var(--neon);
-}
-
-/* ANIMATIONS */
-.before-fade {
-  opacity: 0;
-  transform: translateY(40px);
-}
-
-.fade-in {
-  opacity: 1;
-  transform: translateY(0);
-  transition: 0.8s cubic-bezier(0.19, 1, 0.22, 1);
-}
-
-/* MOBILE */
-@media (max-width: 768px) {
-  nav ul {
-    display: none;
-    flex-direction: column;
-    background: var(--bg-soft);
-    padding: 1.5rem;
-    border-radius: 12px;
-  }
-
-  nav ul.active {
-    display: flex;
-  }
-
-  .mobile-toggle {
-    display: block;
-  }
+.cta-button:hover {
+  background: var(--neon);
+  color: #000;
+  transform: translateY(-3px);
 }
 
 /* CONTACT SECTION */
@@ -279,8 +266,9 @@ footer .contact-info a:hover {
 }
 
 .contact-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 2.5rem;
 }
 
@@ -293,6 +281,7 @@ footer .contact-info a:hover {
   transition: all 0.4s ease;
   position: relative;
   overflow: hidden;
+  min-width: 260px;
 }
 
 .contact-card::before {
@@ -302,6 +291,7 @@ footer .contact-info a:hover {
   background: linear-gradient(120deg, transparent, rgba(255,0,0,0.15), transparent);
   opacity: 0;
   transition: opacity 0.4s ease;
+  pointer-events: none;
 }
 
 .contact-card:hover::before {
@@ -335,71 +325,38 @@ footer .contact-info a:hover {
   text-decoration: underline;
 }
 
-/* Highlight WhatsApp */
-.contact-card.highlight {
-  background: rgba(255, 0, 0, 0.12);
-  border-color: #ff2b2b;
+/* ANIMATIONS */
+.before-fade {
+  opacity: 0;
+  transform: translateY(40px);
 }
 
-.contact-card::before {
-  pointer-events: none;
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+  transition: 0.8s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
-/* Hero Section Cyberpunk Upgrade */
-.hero {
-  position: relative;
-  text-align: center;
-  overflow: hidden;
-  height: 90vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  color: #00ff99; /* neon green text */
-}
+/* MOBILE */
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background: var(--bg-soft);
+    padding: 1.5rem;
+    border-radius: 12px;
+  }
 
-.hero-overlay {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: linear-gradient(120deg, rgba(0,0,0,0.8), rgba(0,255,153,0.15));
-  z-index: 1;
-}
+  nav ul.active {
+    display: flex;
+  }
 
-.hero-content {
-  position: relative;
-  z-index: 2;
-  max-width: 700px;
-  animation: fadeInUp 1.2s ease forwards;
-}
+  .mobile-toggle {
+    display: block;
+  }
 
-.hero-img {
-  position: absolute;
-  bottom: 0;
-  right: 10%;
-  max-width: 400px;
-  width: 35%;
-  animation: float 6s ease-in-out infinite;
-  z-index: 0;
-  opacity: 0.9;
-}
-
-/* Floating Animation */
-@keyframes float {
-  0%, 100% { transform: translateY(0px) rotate(0deg); }
-  50% { transform: translateY(-20px) rotate(-2deg); }
-}
-
-/* Fade In Animation */
-@keyframes fadeInUp {
-  0% { opacity: 0; transform: translateY(30px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-
-/* Make sure image is responsive */
-.hero-img img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 0 20px #00ff99, 0 0 40px #00ff99;
+  .contact-cards {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
     }
