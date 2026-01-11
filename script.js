@@ -15,3 +15,10 @@ const observer = new IntersectionObserver(
 );
 
 document.querySelectorAll(".before-fade").forEach(el => observer.observe(el));
+
+document.querySelectorAll('nav a').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    document.querySelector(link.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+  });
+});
