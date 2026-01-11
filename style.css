@@ -379,3 +379,10 @@ section h2 {
   transform: translateY(0);
   transition: 0.8s cubic-bezier(0.19, 1, 0.22, 1);
   }
+
+nav a:hover,
+.cta-button:hover {
+  text-shadow: 0 0 8px var(--neon);
+  transform: scale(1.05);
+}
+
