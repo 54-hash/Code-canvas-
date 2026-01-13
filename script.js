@@ -1,19 +1,21 @@
-// Mobile menu
-function toggleMenu() {
-  document.getElementById("nav-menu").classList.toggle("active");
-}
+// Mobile Menu Toggle
+const toggleBtn = document.querySelector('.mobile-toggle');
+const navUl = document.querySelector('nav ul');
 
-// Page transitions
-const transition = document.querySelector(".page-transition");
-document.querySelectorAll(".link").forEach(link => {
-  link.addEventListener("click", e => {
-    const href = link.getAttribute("href");
-    if (!href.startsWith("#")) {
-      e.preventDefault();
-      transition.classList.add("active");
-      setTimeout(() => {
-        window.location.href = href;
-      }, 400);
+toggleBtn.addEventListener('click', () => {
+  navUl.classList.toggle('active');
+});
+
+// Optional: Fade-in sections on scroll
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('fade-in');
     }
   });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('section').forEach(section => {
+  section.classList.add('before-fade');
+  observer.observe(section);
 });
