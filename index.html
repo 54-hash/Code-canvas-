@@ -2,24 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Code Canvas</title>
 
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+
+<!-- Page transition overlay -->
+<div class="page-transition"></div>
 
 <header>
   <div class="logo">Code Canvas</div>
+
   <nav>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="#contact">Contact</a></li>
+    <ul id="nav-menu">
+      <li><a href="index.html" class="link">Home</a></li>
+      <li><a href="#about" class="link">About</a></li>
+      <li><a href="#services" class="link">Services</a></li>
+      <li><a href="#projects" class="link">Projects</a></li>
+      <li><a href="portfolio.html" class="link">Portfolio</a></li>
+      <li><a href="#contact" class="link">Contact</a></li>
     </ul>
     <div class="mobile-toggle" onclick="toggleMenu()">☰</div>
   </nav>
@@ -27,22 +32,26 @@
 
 <main>
 
-<section id="home" class="hero">
-  <!-- Floating background image -->
-  <div class="hero-img">
-    <img src="profile.jpg" alt="Cyberpunk Illustration">
-  </div>
-
-  <!-- Overlay for subtle neon effect -->
+<!-- HERO -->
+<section class="hero" id="home">
   <div class="hero-overlay"></div>
 
-  <!-- Text content and button -->
+  <div class="hero-img">
+    <img src="profile.jpg" alt="Profile">
+  </div>
+
   <div class="hero-content">
-    <h1>Web Developer</h1>
-    <p>Crafting immersive digital experiences that glow as bright as your vision</p>
+    <h1 class="glitch" data-text="Web Developer">Web Developer</h1>
+    <p>
+      I build clean, interactive websites with a cyberpunk twist.<br>
+      Turning ideas into glowing digital experiences.
+    </p>
     <a href="#contact" class="cta-button">Hire Me</a>
   </div>
 </section>
+
+<!-- ABOUT -->
+<section id="about" class="section fade">
   <h2>About Me</h2>
   <p>
     100-level university student focused on building sleek, interactive web experiences.
@@ -51,84 +60,84 @@
   <p class="skills">HTML • CSS • JavaScript</p>
 </section>
 
-<section id="services" class="before-fade">
+<!-- SERVICES -->
+<section id="services" class="section fade">
   <h2>Services</h2>
+
   <div class="services-grid">
     <div class="service-card">
       <i class='bx bx-code'></i>
       <h3>Website Development</h3>
-      <p>Fast, modern, responsive websites.</p>
+      <p>Modern, fast and responsive websites.</p>
     </div>
+
     <div class="service-card">
       <i class='bx bx-mobile'></i>
       <h3>Responsive Design</h3>
-      <p>Mobile-first layouts that adapt perfectly.</p>
+      <p>Perfect on phones, tablets and desktops.</p>
     </div>
+
     <div class="service-card">
       <i class='bx bx-envelope'></i>
-      <h3>Contact Forms</h3>
-      <p>Email & WhatsApp integrations.</p>
+      <h3>Contact Integration</h3>
+      <p>Email & WhatsApp contact setup.</p>
     </div>
   </div>
 </section>
 
-<section id="projects" class="before-fade">
+<!-- PROJECTS -->
+<section id="projects" class="section fade">
   <h2>Projects</h2>
+
   <div class="project-grid">
     <div class="project-card">
       <h3>Restaurant Website</h3>
-      <p>Modern restaurant landing page.</p>
-      <a href="restaurant.html" class="btn">Live Demo</a>
+      <p>Modern landing page for a restaurant.</p>
+      <a href="restaurant.html" class="btn link">Live Demo</a>
     </div>
+
     <div class="project-card">
-      <h3>Portfolio</h3>
+      <h3>Portfolio Website</h3>
       <p>Interactive personal portfolio.</p>
-      <a href="portfolio.html" class="btn">Live Demo</a>
+      <a href="portfolio.html" class="btn link">Live Demo</a>
     </div>
+
     <div class="project-card">
       <h3>To-Do App</h3>
       <p>Pure JavaScript task manager.</p>
-      <a href="todo.html" class="btn">Live Demo</a>
+      <a href="todo.html" class="btn link">Live Demo</a>
     </div>
   </div>
 </section>
 
+<!-- CONTACT -->
+<section id="contact" class="contact-section fade">
+  <h2 class="contact-title">Get In Touch</h2>
+  <p class="contact-subtitle">
+    Have a project or idea?<br>Let’s build something powerful.
+  </p>
 
-<section id="contact" class="before-fade contact-section">
-  <div class="contact-wrapper">
+  <div class="contact-cards">
+    <div class="contact-card">
+      <i class='bx bxl-gmail'></i>
+      <h4>Email</h4>
+      <a href="mailto:d9339171@gmail.com">d9339171@gmail.com</a>
+    </div>
 
-    <h2 class="contact-title">Get In Touch</h2>
-    <p class="contact-subtitle">
-      Have a project, idea, or need a website?<br>
-      Let’s build something clean and powerful.
-    </p>
+    <div class="contact-card">
+      <i class='bx bx-phone'></i>
+      <h4>Phone</h4>
+      <a href="tel:+2348063555721">0806 355 5721</a>
+    </div>
 
-    <div class="contact-cards">
-
-      <div class="contact-card">
-        <i class='bx bxl-gmail'></i>
-        <h4>Email</h4>
-        <a href="mailto:d9339171@gmail.com">d9339171@gmail.com</a>
-      </div>
-
-      <div class="contact-card">
-        <i class='bx bx-phone'></i>
-        <h4>Phone</h4>
-        <a href="tel:+2348063555721">0806 355 5721</a>
-      </div>
-
-      <div class="contact-card highlight">
-        <i class='bx bxl-whatsapp'></i>
-        <h4>WhatsApp</h4>
-        <a href="https://wa.me/2348063555721" target="_blank">
-          Start Chat
-        </a>
-      </div>
-
+    <div class="contact-card highlight">
+      <i class='bx bxl-whatsapp'></i>
+      <h4>WhatsApp</h4>
+      <a href="https://wa.me/2348063555721" target="_blank">Start Chat</a>
     </div>
   </div>
 </section>
-</section>
+
 </main>
 
 <footer>
@@ -137,10 +146,4 @@
 
 <script src="script.js"></script>
 </body>
-</html>
-
-
-
-
-
-
+  </html>
