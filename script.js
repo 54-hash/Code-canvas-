@@ -1,24 +1,19 @@
+// Mobile menu
 function toggleMenu() {
-  document.querySelector("nav ul").classList.toggle("active");
+  document.getElementById("nav-menu").classList.toggle("active");
 }
 
-const observer = new IntersectionObserver(
-  entries => {
-    entries.forEach((entry, index) => {
-      if (entry.isIntersecting) {
-        entry.target.style.transitionDelay = `${index * 0.12}s`;
-        entry.target.classList.add("fade-in");
-      }
-    });
-  },
-  { threshold: 0.15 }
-);
-
-document.querySelectorAll(".before-fade").forEach(el => observer.observe(el));
-
-document.querySelectorAll('nav a').forEach(link => {
-  link.addEventListener('click', e => {
-    e.preventDefault();
-    document.querySelector(link.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+// Page transitions
+const transition = document.querySelector(".page-transition");
+document.querySelectorAll(".link").forEach(link => {
+  link.addEventListener("click", e => {
+    const href = link.getAttribute("href");
+    if (!href.startsWith("#")) {
+      e.preventDefault();
+      transition.classList.add("active");
+      setTimeout(() => {
+        window.location.href = href;
+      }, 400);
+    }
   });
 });
