@@ -1,21 +1,20 @@
-// Mobile Menu Toggle
-const toggleBtn = document.querySelector('.mobile-toggle');
-const navUl = document.querySelector('nav ul');
+// Mobile menu toggle
+const toggle = document.querySelector(".mobile-toggle");
+const nav = document.querySelector("nav ul");
 
-toggleBtn.addEventListener('click', () => {
-  navUl.classList.toggle('active');
+toggle.addEventListener("click", () => {
+  nav.classList.toggle("active");
 });
 
-// Optional: Fade-in sections on scroll
+// Scroll fade animation
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      entry.target.classList.add('fade-in');
+      entry.target.classList.add("fade-in");
     }
   });
-}, { threshold: 0.1 });
+}, { threshold: 0.15 });
 
-document.querySelectorAll('section').forEach(section => {
-  section.classList.add('before-fade');
-  observer.observe(section);
+document.querySelectorAll(".before-fade").forEach(el => {
+  observer.observe(el);
 });
