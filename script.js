@@ -1,15 +1,23 @@
-function toggleMenu() {
-  document.getElementById("nav-links").classList.toggle("active");
-}
+// Mobile menu toggle
+const menuToggle = document.getElementById("menu-toggle");
+const navLinks = document.getElementById("nav-links");
 
-const observer = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("fade-in");
-    }
-  });
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
 });
 
-document.querySelectorAll(".before-fade").forEach(el => {
-  observer.observe(el);
-});
+// Fade-in on scroll
+const faders = document.querySelectorAll(".before-fade");
+
+const observer = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("fade-in");
+      }
+    });
+  },
+  { threshold: 0.2 }
+);
+
+faders.forEach(el => observer.observe(el));
