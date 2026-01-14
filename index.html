@@ -21,25 +21,30 @@
       <li><a href="portfolio.html">Portfolio</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-    <div class="mobile-toggle">☰</div>
+    <div class="mobile-toggle" onclick="toggleMenu()">☰</div>
   </nav>
 </header>
 
 <main>
 
+<!-- HERO -->
 <section id="home" class="hero">
-  <div class="hero-content">
-    <h1>Web Developer</h1>
-    <p>I build clean, interactive websites with a cyberpunk twist</p>
-    <a href="#contact" class="cta-button">Hire Me</a>
-  </div>
-
   <div class="hero-img">
     <img src="profile.jpg" alt="Profile">
   </div>
+
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <h1>Web Developer</h1>
+    <p>I build clean, interactive websites with a cyberpunk twist</p>
+    <p class="hero-sub">Crafting immersive digital experiences that glow as bright as your vision</p>
+    <a href="#contact" class="cta-button">Hire Me</a>
+  </div>
 </section>
 
-<section id="about">
+<!-- ABOUT -->
+<section id="about" class="before-fade">
   <h2>About Me</h2>
   <p>
     100-level university student focused on building sleek, interactive web experiences.
@@ -48,7 +53,8 @@
   <p class="skills">HTML • CSS • JavaScript</p>
 </section>
 
-<section id="services">
+<!-- SERVICES -->
+<section id="services" class="before-fade">
   <h2>Services</h2>
   <div class="services-grid">
     <div class="service-card">
@@ -56,11 +62,13 @@
       <h3>Website Development</h3>
       <p>Fast, modern, responsive websites.</p>
     </div>
+
     <div class="service-card">
       <i class='bx bx-mobile'></i>
       <h3>Responsive Design</h3>
       <p>Mobile-first layouts that adapt perfectly.</p>
     </div>
+
     <div class="service-card">
       <i class='bx bx-envelope'></i>
       <h3>Contact Forms</h3>
@@ -69,33 +77,65 @@
   </div>
 </section>
 
-<section id="projects">
+<!-- PROJECTS -->
+<section id="projects" class="before-fade">
   <h2>Projects</h2>
+
   <div class="project-grid">
-    <div class="project-card">
+
+    <a href="restaurant.html" target="_blank" class="project-card">
       <h3>Restaurant Website</h3>
-      <a href="restaurant.html" class="btn">Live Demo</a>
-    </div>
-    <div class="project-card">
+      <p>Modern restaurant landing page.</p>
+      <span class="btn">Live Demo</span>
+    </a>
+
+    <a href="portfolio.html" target="_blank" class="project-card">
       <h3>Portfolio</h3>
-      <a href="portfolio.html" class="btn">Live Demo</a>
-    </div>
-    <div class="project-card">
+      <p>Interactive personal portfolio.</p>
+      <span class="btn">Live Demo</span>
+    </a>
+
+    <a href="todo.html" target="_blank" class="project-card">
       <h3>To-Do App</h3>
-      <a href="todo.html" class="btn">Live Demo</a>
-    </div>
+      <p>Pure JavaScript task manager.</p>
+      <span class="btn">Live Demo</span>
+    </a>
+
   </div>
 </section>
 
-<!-- ✅ OLD SIMPLE CONTACT SECTION -->
-<section id="contact">
-  <h2>Contact Me</h2>
-  <p>Email: <a href="mailto:d9339171@gmail.com">d9339171@gmail.com</a></p>
-  <p>Phone: <a href="tel:+2348063555721">0806 355 5721</a></p>
-  <p>
-    WhatsApp:
-    <a href="https://wa.me/2348063555721" target="_blank">Chat on WhatsApp</a>
-  </p>
+<!-- CONTACT -->
+<section id="contact" class="before-fade contact-section">
+  <div class="contact-wrapper">
+
+    <h2 class="contact-title">Get In Touch</h2>
+    <p class="contact-subtitle">
+      Have a project, idea, or need a website?<br>
+      Let’s build something clean and powerful.
+    </p>
+
+    <div class="contact-cards">
+
+      <div class="contact-card">
+        <i class='bx bxl-gmail'></i>
+        <h4>Email</h4>
+        <a href="mailto:d9339171@gmail.com">d9339171@gmail.com</a>
+      </div>
+
+      <div class="contact-card">
+        <i class='bx bx-phone'></i>
+        <h4>Phone</h4>
+        <a href="tel:+2348063555721">0806 355 5721</a>
+      </div>
+
+      <div class="contact-card highlight">
+        <i class='bx bxl-whatsapp'></i>
+        <h4>WhatsApp</h4>
+        <a href="https://wa.me/2348063555721" target="_blank">Start Chat</a>
+      </div>
+
+    </div>
+  </div>
 </section>
 
 </main>
@@ -104,5 +144,6 @@
   <p>© 2026 Code Canvas</p>
 </footer>
 
+<script src="script.js"></script>
 </body>
-</html>
+          </html>
