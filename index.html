@@ -5,129 +5,138 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Code Canvas</title>
 
-  <link rel="stylesheet" href="style.css" />
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+  <!-- CSS (UNCHANGED) -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-  <div class="logo">Code Canvas</div>
-  <nav>
-    <ul id="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <div class="mobile-toggle" onclick="toggleMenu()">☰</div>
-  </nav>
-</header>
+  <!-- HEADER -->
+  <header>
+    <div class="logo">Code Canvas</div>
 
-<main>
+    <nav>
+      <ul id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
 
-<!-- HERO -->
-<section id="home" class="hero">
-  <div class="hero-inner">
-    <div class="hero-text">
-      <h1>Web Developer</h1>
-      <p>
-        I build clean, interactive websites with a cyberpunk twist.<br>
-        Focused on speed, design, and real-world usability.
-      </p>
-      <a href="#contact" class="cta-button">Hire Me</a>
+    <div class="mobile-toggle" id="menu-toggle">
+      <i class="bx bx-menu"></i>
     </div>
+  </header>
 
-    <div class="hero-image">
-      <img src="profile.jpg" alt="Cyberpunk illustration">
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <h1>Web Developer</h1>
+
+        <p>
+          I build clean, interactive websites with a modern cyberpunk feel.
+          Focused on performance, responsiveness, and smooth user experience.
+        </p>
+
+        <a href="#contact" class="cta-button">Hire Me</a>
+      </div>
+
+      <div class="hero-img">
+        <img src="profile.jpg" alt="Profile">
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+      <h2>Services</h2>
+
+      <div class="services-grid">
+        <div class="service-card before-fade">
+          <i class="bx bx-code-alt"></i>
+          <h3>Web Development</h3>
+          <p>Responsive, fast and modern websites built with clean code.</p>
+        </div>
+
+        <div class="service-card before-fade">
+          <i class="bx bx-paint"></i>
+          <h3>UI Design</h3>
+          <p>Cyberpunk-inspired interfaces that stand out.</p>
+        </div>
+
+        <div class="service-card before-fade">
+          <i class="bx bx-rocket"></i>
+          <h3>Optimization</h3>
+          <p>Performance tuning for smooth user experience.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <h2>Projects</h2>
+
+      <div class="project-grid">
+        <div class="project-card before-fade">
+          <h3>Restaurant Website</h3>
+          <p>Modern restaurant landing page.</p>
+          <a href="restaurant.html" class="btn">Live Demo</a>
+        </div>
+
+        <div class="project-card before-fade">
+          <h3>Portfolio</h3>
+          <p>Personal portfolio website.</p>
+          <a href="portfolio.html" class="btn">Live Demo</a>
+        </div>
+
+        <div class="project-card before-fade">
+          <h3>Todo App</h3>
+          <p>Simple task management app.</p>
+          <a href="todo.html" class="btn">Live Demo</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- CONTACT -->
+  <section class="contact-section" id="contact">
+    <div class="contact-wrapper">
+      <h2 class="contact-title">Get In Touch</h2>
+      <p class="contact-subtitle">Let’s build something amazing together</p>
+
+      <div class="contact-cards">
+        <div class="contact-card">
+          <i class="bx bxl-github"></i>
+          <h4>GitHub</h4>
+          <a href="https://github.com/54-hash" target="_blank">github.com/54-hash</a>
+        </div>
+
+        <div class="contact-card">
+          <i class="bx bxl-twitter"></i>
+          <h4>Twitter</h4>
+          <a href="https://twitter.com/" target="_blank">@yourhandle</a>
+        </div>
+
+        <div class="contact-card">
+          <i class="bx bx-envelope"></i>
+          <h4>Email</h4>
+          <a href="mailto:youremail@gmail.com">youremail@gmail.com</a>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ABOUT -->
-<section id="about" class="before-fade">
-  <h2>About Me</h2>
-  <p>
-    I’m a 100-level university student passionate about modern web development.
-    I create responsive, animated, and user-focused websites.
-  </p>
-  <p class="skills">HTML • CSS • JavaScript</p>
-</section>
-
-<!-- SERVICES -->
-<section id="services" class="before-fade">
-  <h2>Services</h2>
-  <div class="services-grid">
-    <div class="service-card">
-      <i class='bx bx-code'></i>
-      <h3>Website Development</h3>
-      <p>Modern, fast, responsive websites.</p>
-    </div>
-    <div class="service-card">
-      <i class='bx bx-mobile'></i>
-      <h3>Responsive Design</h3>
-      <p>Perfect on phones, tablets & desktops.</p>
-    </div>
-    <div class="service-card">
-      <i class='bx bx-envelope'></i>
-      <h3>Contact Integration</h3>
-      <p>Email & WhatsApp ready forms.</p>
-    </div>
-  </div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects" class="before-fade">
-  <h2>Projects</h2>
-  <div class="project-grid">
-
-    <div class="project-card">
-      <h3>Restaurant Website</h3>
-      <p>Modern restaurant landing page.</p>
-      <a href="restaurant.html" class="btn">Live Demo</a>
-    </div>
-
-    <div class="project-card">
-      <h3>Portfolio Website</h3>
-      <p>Interactive personal portfolio.</p>
-      <a href="portfolio.html" class="btn">Live Demo</a>
-    </div>
-
-    <div class="project-card">
-      <h3>To-Do App</h3>
-      <p>JavaScript task manager.</p>
-      <a href="todo.html" class="btn">Live Demo</a>
-    </div>
-
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="before-fade contact-section">
-  <h2>Get In Touch</h2>
-
-  <div class="contact-info">
-    <a href="mailto:d9339171@gmail.com">
-      <i class='bx bxl-gmail'></i> d9339171@gmail.com
-    </a>
-
-    <a href="tel:+2348063555721">
-      <i class='bx bx-phone'></i> 0806 355 5721
-    </a>
-
-    <a href="https://wa.me/2348063555721" target="_blank">
-      <i class='bx bxl-whatsapp'></i> WhatsApp
-    </a>
-  </div>
-</section>
-
-</main>
-
-<footer>
-  <p>© 2026 Code Canvas</p>
-</footer>
-
-<script src="script.js"></script>
+  <!-- JS -->
+  <script src="script.js"></script>
 </body>
-  </html>
+</html>
