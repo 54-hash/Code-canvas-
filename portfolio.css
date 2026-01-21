@@ -175,12 +175,21 @@ section h2 {
   transform: translateY(30px);
   transition: all 0.8s ease-out;
   padding: 4rem 2rem;
-  background: #111; /* Changed to solid dark for better text visibility */
+  background: #111; /* Solid dark background for visibility */
   margin: 2rem;
   border-radius: 10px;
   border: 1px solid rgba(0, 255, 0, 0.3);
   box-shadow: 0 0 10px rgba(0, 255, 0, 0.2);
-  color: #fff; /* Explicit white text for visibility */
+  color: #fff; /* Explicit white text */
+}
+
+/* Explicit text colors for all section content */
+.fade-section p {
+  color: #fff; /* Paragraphs in About, etc. */
+}
+
+.fade-section h3 {
+  color: #00ff00; /* Headings in Projects */
 }
 
 /* Skills Grid */
@@ -231,7 +240,7 @@ section h2 {
   box-shadow: 0 4px 6px rgba(0, 255, 0, 0.2);
   transition: transform 0.3s, box-shadow 0.3s, border 0.3s;
   border: 1px solid rgba(0, 255, 0, 0.3);
-  color: #fff; /* Ensure text is visible */
+  color: #fff; /* Explicit for all text */
 }
 
 .project-card:hover {
@@ -246,7 +255,11 @@ section h2 {
 }
 
 .project-card p {
-  color: #ccc; /* Light gray for descriptions */
+  color: #ccc; /* Descriptions */
+}
+
+.project-card .tech {
+  color: #00ff00; /* Tech stack */
 }
 
 .project-links {
@@ -314,7 +327,11 @@ form button:hover {
 .contact-info {
   text-align: center;
   margin-top: 2rem;
-  color: #fff; /* Ensure visibility */
+  color: #fff;
+}
+
+.contact-info p {
+  color: #fff; /* Explicit for phone/WhatsApp/GitHub lines */
 }
 
 .contact-info a {
@@ -362,4 +379,4 @@ footer {
   .menu-toggle {
     display: block;
   }
-                             }
+  }
