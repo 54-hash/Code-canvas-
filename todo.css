@@ -1,74 +1,184 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  background: #121212;
-  color: #e0e0e0;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  min-height: 100vh;
-  padding: 40px 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+    line-height: 1.6;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+}
+
+/* Card Design */
+.card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+}
+
+header {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
 }
 
 header h1 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #00bcd4;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 8px;
 }
 
-.todo-container {
-  background: #1e1e1e;
-  padding: 20px;
-  border-radius: 10px;
-  width: 100%;
-  max-width: 400px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+header p {
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+/* Input Section */
+.input-section {
+    display: flex;
+    padding: 20px;
+    background: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
 }
 
 #task-input {
-  width: 70%;
-  padding: 10px;
-  border: 1px solid #333;
-  border-radius: 5px;
-  margin-right: 10px;
-  background: #2a2a2a;
-  color: #e0e0e0;
+    flex: 1;
+    padding: 12px 16px;
+    border: 2px solid #e9ecef;
+    border-radius: 8px 0 0 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+#task-input:focus {
+    outline: none;
+    border-color: #4facfe;
+    box-shadow: 0 0 0 3px rgba(79, 172, 254, 0.1);
 }
 
 #add-btn {
-  padding: 10px 15px;
-  border: none;
-  background: #00bcd4;
-  color: #121212;
-  border-radius: 5px;
-  cursor: pointer;
+    padding: 12px 16px;
+    background: #4facfe;
+    color: white;
+    border: none;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.1s ease;
+    font-size: 1rem;
 }
 
 #add-btn:hover {
-  background: #00a2c0;
+    background: #00c6fb;
 }
 
+#add-btn:active {
+    transform: scale(0.95);
+}
+
+/* Task List */
 #task-list {
-  margin-top: 20px;
-  list-style: none;
-  padding-left: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-#task-list li {
-  display: flex;
-  justify-content: space-between;
-  padding: 8px 12px;
-  border-bottom: 1px solid #333;
+.task-item {
+    display: flex;
+    align-items: center;
+    padding: 16px 20px;
+    border-bottom: 1px solid #e9ecef;
+    transition: background 0.2s ease;
+    animation: slideIn 0.3s ease;
 }
 
-#task-list li button {
-  border: none;
-  background: #f44336;
-  color: white;
-  border-radius: 5px;
-  cursor: pointer;
-  padding: 2px 8px;
+.task-item:last-child {
+    border-bottom: none;
 }
 
-#task-list li button:hover {
-  background: #c62828;
+.task-item:hover {
+    background: #f8f9fa;
 }
+
+.task-item.completed .task-text {
+    text-decoration: line-through;
+    color: #6c757d;
+}
+
+.task-checkbox {
+    margin-right: 12px;
+    transform: scale(1.2);
+    accent-color: #4facfe;
+}
+
+.task-text {
+    flex: 1;
+    font-size: 1rem;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    color: #dc3545;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: color 0.2s ease, transform 0.1s ease;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.delete-btn:hover {
+    color: #c82333;
+    background: rgba(220, 53, 69, 0.1);
+}
+
+.delete-btn:active {
+    transform: scale(0.9);
+}
+
+/* Animations */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .app-container {
+        padding: 10px;
+    }
+    header h1 {
+        font-size: 1.5rem;
+    }
+    .input-section {
+        padding: 16px;
+    }
+    .task-item {
+        padding: 12px 16px;
+    }
+      }
