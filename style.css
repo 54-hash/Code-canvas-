@@ -323,3 +323,29 @@ left: 5%;
 width: 25%;
 }
   }
+
+/* ===== CLICK FIXES ===== */
+
+/* Allow clicks through glass overlays */
+.project-card::before,
+.service-card::before {
+  pointer-events: none;
+}
+
+/* Ensure buttons are always clickable */
+.project-content {
+  position: relative;
+  z-index: 2;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  pointer-events: auto;
+}
+
+/* Prevent transformed parents from blocking clicks */
+.project-card,
+.service-card {
+  transform-style: preserve-3d;
+}
