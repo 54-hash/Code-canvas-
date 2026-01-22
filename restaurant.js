@@ -1,5 +1,3 @@
-
-
 /* NAVBAR TOGGLE */
 const toggle = document.querySelector(".menu-toggle");
 const navLinks = document.querySelector(".nav-links");
@@ -7,6 +5,7 @@ const navLinks = document.querySelector(".nav-links");
 toggle.addEventListener("click", () => {
   navLinks.classList.toggle("show");
 });
+
 /* WHATSAPP */
 document.querySelectorAll(".order-btn").forEach(btn => {
   btn.addEventListener("click", () => {
@@ -14,7 +13,7 @@ document.querySelectorAll(".order-btn").forEach(btn => {
   });
 });
 
-/* SLIDER */
+/* SLIDER (if images are added later) */
 let index = 0;
 const slides = document.querySelectorAll(".slide");
 
@@ -50,15 +49,20 @@ drinksBtn.onclick = () => {
   foodBtn.classList.remove("active");
 };
 
-/* SCROLL ANIMATION */
+/* SCROLL ANIMATION with Stagger */
 const faders = document.querySelectorAll(".fade-in");
+let delay = 0;
 
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      entry.target.classList.add("show");
+      setTimeout(() => {
+        entry.target.classList.add("show");
+      }, delay);
+      delay += 200; // Stagger delay
+      observer.unobserve(entry.target);
     }
   });
-});
+}, { threshold: 0.2 });
 
 faders.forEach(el => observer.observe(el));
