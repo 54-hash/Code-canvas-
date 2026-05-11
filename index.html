@@ -3,45 +3,93 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Code Canvas</title>
 
-  <!-- Google Font -->
+  
+  <title>Code Canvas | Web Developer & UI Designer Portfolio</title>
+  <meta name="description" content="Code Canvas - Professional web developer and UI designer specializing in glassmorphism, responsive websites, and cyber-inspired interfaces. View my projects and hire me." />
+  <meta name="keywords" content="web developer, UI designer, glassmorphism, portfolio, responsive websites, frontend developer" />
+  <meta name="author" content="Code Canvas" />
+  <meta name="robots" content="index, follow" />
+
+  
+  <meta property="og:title" content="Code Canvas | Web Developer & UI Designer Portfolio" />
+  <meta property="og:description" content="Professional web developer specializing in futuristic, glassmorphism interfaces and responsive websites." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://54-hash.github.io/Code-canvas-/" />
+  <meta property="og:image" content="https://54-hash.github.io/Code-canvas-/profile.jpg" />
+
+  
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Code Canvas | Web Developer & UI Designer" />
+  <meta name="twitter:description" content="Building clean, interactive websites with a futuristic edge." />
+
+  
+  <link rel="canonical" href="https://54-hash.github.io/Code-canvas-/" />
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://unpkg.com" />
+
+  
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- Icons -->
+
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 
-  <!-- CSS -->
+  
   <link rel="stylesheet" href="style.css">
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Code Canvas",
+    "url": "https://54-hash.github.io/Code-canvas-/",
+    "jobTitle": "Web Developer & UI Designer",
+    "description": "I build clean, interactive websites with a futuristic edge — fast, responsive, and visually striking.",
+    "knowsAbout": ["Web Development", "UI Design", "Glassmorphism", "Responsive Design", "Frontend Development"],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+234-806-355-5721",
+      "contactType": "customer service",
+      "availableLanguage": ["English"]
+    }
+  }
+  </script>
 </head>
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <div class="logo">Code Canvas</div>
+  
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <nav>
+  
+  <header role="banner">
+    <div class="logo" aria-label="Code Canvas Logo">Code Canvas</div>
+
+    <nav role="navigation" aria-label="Main navigation">
       <ul id="nav-links">
-        <li><a href="#home">Home</a></li>
+        <li><a href="#home" aria-current="page">Home</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
 
-    <div class="mobile-toggle" id="menu-toggle">
-      <i class="bx bx-menu"></i>
-    </div>
+    <button class="mobile-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
+      <i class="bx bx-menu" aria-hidden="true"></i>
+    </button>
   </header>
 
-  <main>
+  <main id="main-content">
 
-    <!-- HERO -->
-    <section class="hero" id="home" style="scroll-margin-top: 100px;">
-      <div class="hero-overlay"></div>
+    
+    <section class="hero" id="home" aria-labelledby="hero-heading">
+      <div class="hero-overlay" aria-hidden="true"></div>
 
       <div class="hero-content">
-        <h1>Web Developer</h1>
+        <h1 id="hero-heading">Web Developer</h1>
         <p>
           I build clean, interactive websites with a futuristic edge — fast, responsive, and visually striking.
         </p>
@@ -49,99 +97,113 @@
       </div>
 
       <div class="hero-img">
-        <img src="profile.jpg" alt="Profile Image">
+        
+        <img src="profile.jpg" alt="Code Canvas - Web Developer and UI Designer profile photo" width="200" height="200" loading="eager" />
       </div>
     </section>
 
-    <!-- SERVICES -->
-    <section id="services" style="scroll-margin-top: 100px;">
-      <h2>Services</h2>
+    
+    <section id="services" aria-labelledby="services-heading">
+      <h2 id="services-heading">Services</h2>
 
       <div class="services-grid">
-        <div class="service-card before-fade">
-          <i class="bx bx-code-alt"></i>
+        <article class="service-card before-fade">
+          <i class="bx bx-code-alt" aria-hidden="true"></i>
           <h3>Web Development</h3>
           <p>Responsive, fast, and scalable websites built with clean code.</p>
-        </div>
+        </article>
 
-        <div class="service-card before-fade">
-          <i class="bx bx-paint"></i>
+        <article class="service-card before-fade">
+          <i class="bx bx-paint" aria-hidden="true"></i>
           <h3>UI Design</h3>
           <p>Modern glassmorphism and cyber-inspired interfaces.</p>
-        </div>
+        </article>
 
-        <div class="service-card before-fade">
-          <i class="bx bx-rocket"></i>
+        <article class="service-card before-fade">
+          <i class="bx bx-rocket" aria-hidden="true"></i>
           <h3>Optimization</h3>
           <p>Performance tuning for speed, SEO, and smooth UX.</p>
-        </div>
+        </article>
       </div>
     </section>
 
-    <!-- PROJECTS -->
-    <section id="projects" style="scroll-margin-top: 100px;">
-      <h2>My Projects</h2>
+    
+    <section id="projects" aria-labelledby="projects-heading">
+      <h2 id="projects-heading">My Projects</h2>
 
       <div class="project-grid">
 
-        <div class="project-card before-fade">
+        <article class="project-card before-fade">
           <div class="project-content">
             <h3>Restaurant Website</h3>
-            <p>Modern restaurant landing page.</p>
-            <a href="./restaurant.html" class="btn">Live Demo</a>
+            <p class="project-desc">Modern restaurant landing page with elegant menu design and reservation system.</p>
+            <p class="tech-stack"><strong>Tech:</strong> HTML5, CSS3, JavaScript, Responsive Design</p>
+            <a href="./restaurant.html" class="btn" aria-label="View Restaurant Website live demo">Live Demo</a>
           </div>
-        </div>
+        </article>
 
-        <div class="project-card before-fade">
+        <article class="project-card before-fade">
           <div class="project-content">
             <h3>Portfolio</h3>
-            <p>Personal portfolio website.</p>
-            <a href="./portfolio.html" class="btn">Live Demo</a>
+            <p class="project-desc">Personal portfolio website showcasing projects with glassmorphism UI and smooth animations.</p>
+            <p class="tech-stack"><strong>Tech:</strong> HTML5, CSS3 (Glassmorphism), JavaScript, Intersection Observer API</p>
+            <a href="./portfolio.html" class="btn" aria-label="View Portfolio live demo">Live Demo</a>
           </div>
-        </div>
+        </article>
 
-        <div class="project-card before-fade">
+        <article class="project-card before-fade">
           <div class="project-content">
             <h3>Todo App</h3>
-            <p>Simple task management app.</p>
-            <a href="./todo.html" class="btn">Live Demo</a>
+            <p class="project-desc">Simple task management app with local storage persistence and clean interface.</p>
+            <p class="tech-stack"><strong>Tech:</strong> HTML5, CSS3, JavaScript, LocalStorage API</p>
+            <a href="./todo.html" class="btn" aria-label="View Todo App live demo">Live Demo</a>
           </div>
-        </div>
+        </article>
 
       </div>
     </section>
 
   </main>
 
-  <!-- CONTACT -->
-  <section class="contact-section" id="contact" style="scroll-margin-top: 100px;">
+  
+  <section class="contact-section" id="contact" aria-labelledby="contact-heading">
     <div class="contact-wrapper">
-      <h2 class="contact-title">Get In Touch</h2>
-      <p class="contact-subtitle">Let’s build something amazing together</p>
+      <h2 class="contact-title" id="contact-heading">Get In Touch</h2>
+      <p class="contact-subtitle">Let's build something amazing together</p>
 
       <div class="contact-cards">
-        <div class="contact-card">
-          <i class="bx bx-phone"></i>
+        <article class="contact-card">
+          <i class="bx bx-phone" aria-hidden="true"></i>
           <h4>Call Me</h4>
-          <a href="tel:+2348063555721">0806 355 5721</a>
-        </div>
+          <a href="tel:+2348063555721" aria-label="Call Code Canvas at 0806 355 5721">0806 355 5721</a>
+        </article>
 
-        <div class="contact-card">
-          <i class="bx bxl-whatsapp"></i>
+        <article class="contact-card">
+          <i class="bx bxl-whatsapp" aria-hidden="true"></i>
           <h4>WhatsApp</h4>
-          <a href="https://wa.me/2348063555721" target="_blank">Chat Now</a>
-        </div>
+          <a href="https://wa.me/2348063555721" target="_blank" rel="noopener noreferrer" aria-label="Chat with Code Canvas on WhatsApp">Chat Now</a>
+        </article>
 
-        <div class="contact-card">
-          <i class="bx bx-envelope"></i>
+        <article class="contact-card">
+          <i class="bx bx-envelope" aria-hidden="true"></i>
           <h4>Email</h4>
-          <a href="mailto:d9339171@gmail.com">d9339171@gmail.com</a>
-        </div>
+          <a href="mailto:d9339171@gmail.com" aria-label="Email Code Canvas at d9339171@gmail.com">d9339171@gmail.com</a>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- JS -->
+  
+  <footer role="contentinfo">
+    <p>&copy; 2026 Code Canvas. All rights reserved.</p>
+    <p class="footer-links">
+      <a href="https://github.com/54-hash" target="_blank" rel="noopener noreferrer" aria-label="Visit Code Canvas GitHub profile">
+        <i class="bx bxl-github" aria-hidden="true"></i> GitHub
+      </a>
+    </p>
+  </footer>
+
+  
   <script src="script.js"></script>
 </body>
-    </html>
+</html>
