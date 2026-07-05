@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+  
   <title>Code Canvas | Silver - Web Developer & UI Designer Portfolio</title>
   <meta name="description" content="Code Canvas by Silver - Professional web developer and UI designer from Nigeria specializing in glassmorphism, responsive websites, and cyber-inspired interfaces. Hire me for your next project." />
-  <meta name="keywords" content="web developer, UI designer, glassmorphism, portfolio, responsive websites, frontend developer, Nigeria" />
+  <meta name="keywords" content="web developer, UI designer, glassmorphism, portfolio, responsive websites, frontend developer, Nigeria, HTML5, CSS3, JavaScript, React" />
   <meta name="author" content="Silver - Code Canvas" />
   <meta name="robots" content="index, follow" />
   
@@ -15,23 +15,30 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://54-hash.github.io/Code-canvas-/" />
   <meta property="og:image" content="https://54-hash.github.io/Code-canvas-/profile.jpg" />
-
+  
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Code Canvas | Silver - Web Developer & UI Designer" />
   <meta name="twitter:description" content="Building clean, interactive websites with a futuristic edge. Based in Nigeria." />
-
+  
+  <!-- Canonical URL -->
   <link rel="canonical" href="https://54-hash.github.io/Code-canvas-/" />
-
+  
+  <!-- Preconnect for Performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preconnect" href="https://unpkg.com" />
-
+  
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+  <!-- Icons -->
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
-
+  
+  <!-- Structured Data (JSON-LD) for SEO -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -41,7 +48,7 @@
     "url": "https://54-hash.github.io/Code-canvas-/",
     "jobTitle": "Web Developer & UI Designer",
     "description": "I build clean, interactive websites with a futuristic edge — fast, responsive, and visually striking.",
-    "knowsAbout": ["Web Development", "UI Design", "Glassmorphism", "Responsive Design", "Frontend Development", "UI/UX Design"],
+    "knowsAbout": ["Web Development", "UI Design", "Glassmorphism", "Responsive Design", "Frontend Development", "UI/UX Design", "HTML5", "CSS3", "JavaScript", "React"],
     "nationality": "Nigerian",
     "contactPoint": {
       "@type": "ContactPoint",
@@ -54,8 +61,10 @@
 </head>
 <body>
 
+  <!-- Skip to main content for accessibility -->
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
+  <!-- HEADER -->
   <header role="banner">
     <div class="logo" aria-label="Code Canvas Logo">Code Canvas</div>
 
@@ -63,6 +72,7 @@
       <ul id="nav-links">
         <li><a href="#home" aria-current="page">Home</a></li>
         <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -76,6 +86,7 @@
 
   <main id="main-content">
 
+    <!-- HERO -->
     <section class="hero" id="home" aria-labelledby="hero-heading">
       <div class="hero-overlay" aria-hidden="true"></div>
 
@@ -92,9 +103,10 @@
       </div>
     </section>
 
+    <!-- ABOUT -->
     <section class="about-section" id="about" aria-labelledby="about-heading">
       <div class="about-wrapper">
-
+        
         <div class="about-header">
           <span class="about-label">Get To Know Me</span>
           <h2 id="about-heading">About Me</h2>
@@ -102,7 +114,7 @@
         </div>
 
         <div class="about-main">
-
+          
           <div class="about-avatar-wrapper before-fade">
             <div class="about-avatar-glow"></div>
             <div class="about-avatar">
@@ -116,7 +128,7 @@
               <span class="wave" aria-hidden="true">👋</span>
               <h3>Hi, I'm <span class="highlight-name">Silver</span></h3>
             </div>
-
+            
             <div class="about-body">
               <p>
                 I enjoy building websites because I like <strong>creating things</strong>. There's something satisfying about taking an idea and turning it into something real with code. Whether it's a landing page, a portfolio, or a full website — I love the process of bringing it to life.
@@ -132,48 +144,67 @@
 
         </div>
 
-        <div class="about-stats">
+      </div>
+    </section>
 
-          <article class="stat-card before-fade">
-            <div class="stat-icon">
-              <i class="bx bx-code-block" aria-hidden="true"></i>
+    <!-- SKILLS -->
+    <section class="skills-section" id="skills" aria-labelledby="skills-heading">
+      <div class="skills-wrapper">
+        
+        <div class="skills-header">
+          <span class="skills-label">What I Work With</span>
+          <h2 id="skills-heading">My Skills</h2>
+          <div class="skills-line"></div>
+        </div>
+
+        <div class="skills-grid">
+
+          <!-- Frontend -->
+          <article class="skill-category before-fade">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon">
+                <i class="bx bx-code-block" aria-hidden="true"></i>
+              </div>
+              <h3>Frontend</h3>
             </div>
-            <div class="stat-info">
-              <h4>Frontend</h4>
-              <span>HTML · CSS · JS</span>
-            </div>
+            <ul class="skill-list">
+              <li><span class="skill-dot"></span> HTML5</li>
+              <li><span class="skill-dot"></span> CSS3</li>
+              <li><span class="skill-dot"></span> JavaScript (ES6+)</li>
+              <li><span class="skill-dot"></span> React</li>
+            </ul>
           </article>
 
-          <article class="stat-card before-fade">
-            <div class="stat-icon">
-              <i class="bx bx-palette" aria-hidden="true"></i>
+          <!-- Styling -->
+          <article class="skill-category before-fade">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon styling-icon">
+                <i class="bx bx-palette" aria-hidden="true"></i>
+              </div>
+              <h3>Styling</h3>
             </div>
-            <div class="stat-info">
-              <h4>UI/UX</h4>
-              <span>Design · Glassmorphism</span>
-            </div>
+            <ul class="skill-list">
+              <li><span class="skill-dot styling-dot"></span> Responsive Design</li>
+              <li><span class="skill-dot styling-dot"></span> CSS Flexbox</li>
+              <li><span class="skill-dot styling-dot"></span> CSS Grid</li>
+              <li><span class="skill-dot styling-dot"></span> UI/UX Design</li>
+            </ul>
           </article>
 
-          <article class="stat-card before-fade">
-            <div class="stat-icon">
-              <i class="bx bx-map" aria-hidden="true"></i>
+          <!-- Tools -->
+          <article class="skill-category before-fade">
+            <div class="skill-cat-header">
+              <div class="skill-cat-icon tools-icon">
+                <i class="bx bx-wrench" aria-hidden="true"></i>
+              </div>
+              <h3>Tools</h3>
             </div>
-            <div class="stat-info">
-              <h4>Location</h4>
-              <span>Nigeria</span>
-            </div>
-          </article>
-
-          <article class="stat-card before-fade">
-            <div class="stat-icon">
-              <i class="bx bx-rocket" aria-hidden="true"></i>
-            </div>
-            <div class="stat-info">
-              <h4>Status</h4>
-              <span class="status-live">
-                <span class="status-dot"></span> Available
-              </span>
-            </div>
+            <ul class="skill-list">
+              <li><span class="skill-dot tools-dot"></span> Git</li>
+              <li><span class="skill-dot tools-dot"></span> GitHub</li>
+              <li><span class="skill-dot tools-dot"></span> VS Code</li>
+              <li><span class="skill-dot tools-dot"></span> Figma</li>
+            </ul>
           </article>
 
         </div>
@@ -181,6 +212,7 @@
       </div>
     </section>
 
+    <!-- SERVICES -->
     <section id="services" aria-labelledby="services-heading">
       <h2 id="services-heading">Services</h2>
 
@@ -205,6 +237,7 @@
       </div>
     </section>
 
+    <!-- PROJECTS -->
     <section id="projects" aria-labelledby="projects-heading">
       <h2 id="projects-heading">My Projects</h2>
 
@@ -241,7 +274,8 @@
     </section>
 
   </main>
-  
+
+  <!-- CONTACT -->
   <section class="contact-section" id="contact" aria-labelledby="contact-heading">
     <div class="contact-wrapper">
       <h2 class="contact-title" id="contact-heading">Get In Touch</h2>
@@ -269,6 +303,7 @@
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer role="contentinfo">
     <p>&copy; 2026 Code Canvas. All rights reserved.</p>
     <p class="footer-links">
@@ -278,6 +313,8 @@
     </p>
   </footer>
 
+  <!-- JS -->
   <script src="script.js"></script>
 </body>
-</html>            
+</html>
+
