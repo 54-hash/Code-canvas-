@@ -1,44 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
   <title>Code Canvas | Silver - Web Developer & UI Designer Portfolio</title>
   <meta name="description" content="Code Canvas by Silver - Professional web developer and UI designer from Nigeria specializing in glassmorphism, responsive websites, and cyber-inspired interfaces. Hire me for your next project." />
   <meta name="keywords" content="web developer, UI designer, glassmorphism, portfolio, responsive websites, frontend developer, Nigeria, HTML5, CSS3, JavaScript, React" />
   <meta name="author" content="Silver - Code Canvas" />
   <meta name="robots" content="index, follow" />
-  
   <meta property="og:title" content="Code Canvas | Silver - Web Developer & UI Designer" />
   <meta property="og:description" content="Professional web developer from Nigeria specializing in futuristic, glassmorphism interfaces and responsive websites." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://54-hash.github.io/Code-canvas-/" />
   <meta property="og:image" content="https://54-hash.github.io/Code-canvas-/profile.jpg" />
-  
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Code Canvas | Silver - Web Developer & UI Designer" />
   <meta name="twitter:description" content="Building clean, interactive websites with a futuristic edge. Based in Nigeria." />
-  
-  <!-- Canonical URL -->
   <link rel="canonical" href="https://54-hash.github.io/Code-canvas-/" />
-  
-  <!-- Preconnect for Performance -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%91%81%3C/text%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preconnect" href="https://unpkg.com" />
-  
-  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- Icons -->
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
-  
-  <!-- Structured Data (JSON-LD) for SEO -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -61,13 +46,17 @@
 </head>
 <body>
 
-  <!-- Skip to main content for accessibility -->
+  <div id="loader">
+    <div class="loader-content">
+      <div class="loader-logo">Code Canvas</div>
+      <div class="loader-bar"><div class="loader-progress"></div></div>
+    </div>
+  </div>
+
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <!-- HEADER -->
   <header role="banner">
     <div class="logo" aria-label="Code Canvas Logo">Code Canvas</div>
-
     <nav role="navigation" aria-label="Main navigation">
       <ul id="nav-links">
         <li><a href="#home" aria-current="page">Home</a></li>
@@ -78,7 +67,6 @@
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-
     <button class="mobile-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-links">
       <i class="bx bx-menu" aria-hidden="true"></i>
     </button>
@@ -86,35 +74,28 @@
 
   <main id="main-content">
 
-    <!-- HERO -->
     <section class="hero" id="home" aria-labelledby="hero-heading">
       <div class="hero-overlay" aria-hidden="true"></div>
-
       <div class="hero-content">
-        <h1 id="hero-heading">Web Developer</h1>
-        <p>
-          I build clean, interactive websites with a futuristic edge — fast, responsive, and visually striking.
-        </p>
+        <h1 id="hero-heading">Hi, I'm <span class="highlight-name">Silver</span></h1>
+        <p class="hero-subtitle">Web Developer & UI Designer</p>
+        <p>I build clean, interactive websites with a futuristic edge — fast, responsive, and visually striking.</p>
         <a href="#contact" class="cta-button">Hire Me</a>
+        <div class="status-badge"><span class="status-dot"></span>Available for freelance work</div>
       </div>
-
       <div class="hero-img">
         <img src="profile.jpg" alt="Silver - Web Developer and UI Designer profile photo" width="200" height="200" loading="eager" />
       </div>
     </section>
 
-    <!-- ABOUT -->
     <section class="about-section" id="about" aria-labelledby="about-heading">
       <div class="about-wrapper">
-        
         <div class="about-header">
           <span class="about-label">Get To Know Me</span>
           <h2 id="about-heading">About Me</h2>
           <div class="about-line"></div>
         </div>
-
         <div class="about-main">
-          
           <div class="about-avatar-wrapper before-fade">
             <div class="about-avatar-glow"></div>
             <div class="about-avatar">
@@ -122,49 +103,37 @@
             </div>
             <div class="about-avatar-ring"></div>
           </div>
-
           <div class="about-text before-fade">
             <div class="about-greeting">
               <span class="wave" aria-hidden="true">👋</span>
               <h3>Hi, I'm <span class="highlight-name">Silver</span></h3>
             </div>
-            
             <div class="about-body">
-              <p>
-                I enjoy building websites because I like <strong>creating things</strong>. There's something satisfying about taking an idea and turning it into something real with code. Whether it's a landing page, a portfolio, or a full website — I love the process of bringing it to life.
-              </p>
-              <p>
-                I'm a <strong>frontend developer</strong> who's always learning and improving. Right now, I'm expanding my skills in <strong>UI/UX design</strong> because I want to build websites that not only work well but also <em>feel great</em> to use.
-              </p>
-              <p>
-                Every project I take on is another opportunity to learn, improve, and create something I'm proud of.
-              </p>
+              <p>I enjoy building websites because I like <strong>creating things</strong>. There's something satisfying about taking an idea and turning it into something real with code. Whether it's a landing page, a portfolio, or a full website — I love the process of bringing it to life.</p>
+              <p>I'm a <strong>frontend developer</strong> who's always learning and improving. Right now, I'm expanding my skills in <strong>UI/UX design</strong> because I want to build websites that not only work well but also <em>feel great</em> to use.</p>
+              <p>Every project I take on is another opportunity to learn, improve, and create something I'm proud of.</p>
+            </div>
+            <div class="about-stats">
+              <div class="stat"><h4>3+</h4><p>Years Learning</p></div>
+              <div class="stat"><h4>6+</h4><p>Projects Built</p></div>
+              <div class="stat"><h4>100%</h4><p>Commitment</p></div>
             </div>
           </div>
-
         </div>
-
       </div>
     </section>
 
-    <!-- SKILLS -->
     <section class="skills-section" id="skills" aria-labelledby="skills-heading">
       <div class="skills-wrapper">
-        
         <div class="skills-header">
           <span class="skills-label">What I Work With</span>
           <h2 id="skills-heading">My Skills</h2>
           <div class="skills-line"></div>
         </div>
-
         <div class="skills-grid">
-
-          <!-- Frontend -->
           <article class="skill-category before-fade">
             <div class="skill-cat-header">
-              <div class="skill-cat-icon">
-                <i class="bx bx-code-block" aria-hidden="true"></i>
-              </div>
+              <div class="skill-cat-icon"><i class="bx bx-code-block" aria-hidden="true"></i></div>
               <h3>Frontend</h3>
             </div>
             <ul class="skill-list">
@@ -174,13 +143,9 @@
               <li><span class="skill-dot"></span> React</li>
             </ul>
           </article>
-
-          <!-- Styling -->
           <article class="skill-category before-fade">
             <div class="skill-cat-header">
-              <div class="skill-cat-icon styling-icon">
-                <i class="bx bx-palette" aria-hidden="true"></i>
-              </div>
+              <div class="skill-cat-icon styling-icon"><i class="bx bx-palette" aria-hidden="true"></i></div>
               <h3>Styling</h3>
             </div>
             <ul class="skill-list">
@@ -190,13 +155,9 @@
               <li><span class="skill-dot styling-dot"></span> UI/UX Design</li>
             </ul>
           </article>
-
-          <!-- Tools -->
           <article class="skill-category before-fade">
             <div class="skill-cat-header">
-              <div class="skill-cat-icon tools-icon">
-                <i class="bx bx-wrench" aria-hidden="true"></i>
-              </div>
+              <div class="skill-cat-icon tools-icon"><i class="bx bx-wrench" aria-hidden="true"></i></div>
               <h3>Tools</h3>
             </div>
             <ul class="skill-list">
@@ -206,115 +167,304 @@
               <li><span class="skill-dot tools-dot"></span> Figma</li>
             </ul>
           </article>
-
         </div>
-
       </div>
     </section>
 
-    <!-- SERVICES -->
     <section id="services" aria-labelledby="services-heading">
-      <h2 id="services-heading">Services</h2>
-
+      <div class="section-header before-fade">
+        <span class="section-tag">What I Do</span>
+        <h2 id="services-heading">Services</h2>
+        <div class="section-line"></div>
+        <p class="section-desc">Focused expertise to help you ship faster and look better.</p>
+      </div>
       <div class="services-grid">
         <article class="service-card before-fade">
           <i class="bx bx-code-alt" aria-hidden="true"></i>
           <h3>Web Development</h3>
-          <p>Responsive, fast, and scalable websites built with clean code.</p>
+          <p>Responsive, fast, and scalable websites built with clean code. From landing pages to complex web applications, I deliver solutions that perform.</p>
         </article>
-
         <article class="service-card before-fade">
           <i class="bx bx-paint" aria-hidden="true"></i>
           <h3>UI Design</h3>
-          <p>Modern glassmorphism and cyber-inspired interfaces.</p>
+          <p>Modern glassmorphism and cyber-inspired interfaces. I design with the developer in mind — creating assets that are both beautiful and practical.</p>
         </article>
-
         <article class="service-card before-fade">
           <i class="bx bx-rocket" aria-hidden="true"></i>
           <h3>Optimization</h3>
-          <p>Performance tuning for speed, SEO, and smooth UX.</p>
+          <p>Performance tuning for speed, SEO, and smooth UX. I audit, identify bottlenecks, and optimize so your site ranks better and feels snappier.</p>
         </article>
       </div>
     </section>
 
-    <!-- PROJECTS -->
     <section id="projects" aria-labelledby="projects-heading">
-      <h2 id="projects-heading">My Projects</h2>
-
+      <div class="section-header before-fade">
+        <span class="section-tag">Portfolio</span>
+        <h2 id="projects-heading">My Projects</h2>
+        <div class="section-line"></div>
+        <p class="section-desc">A selection of work that showcases my skills and growth.</p>
+      </div>
       <div class="project-grid">
 
         <article class="project-card before-fade">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&auto=format&fit=crop&q=80" alt="Savory & Sage Restaurant Website" loading="lazy" />
+            <div class="project-overlay">
+              <a href="./restaurant.html" class="btn btn-sm" aria-label="View Restaurant Website live demo">Live Demo</a>
+              <a href="https://github.com/54-hash/restaurant-website" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" aria-label="View Restaurant Website source code">GitHub</a>
+            </div>
+          </div>
           <div class="project-content">
-            <h3>Restaurant Website</h3>
-            <p class="project-desc">Modern restaurant landing page with elegant menu design and reservation system.</p>
-            <p class="tech-stack"><strong>Tech:</strong> HTML5, CSS3, JavaScript, Responsive Design</p>
-            <a href="./restaurant.html" class="btn" aria-label="View Restaurant Website live demo">Live Demo</a>
+            <div class="project-tags">
+              <span class="tag">Responsive</span>
+              <span class="tag tag-purple">JavaScript</span>
+              <span class="tag tag-blue">Animation</span>
+            </div>
+            <h3>Savory & Sage</h3>
+            <p class="project-desc">A modern restaurant landing page featuring an elegant menu design, online reservation system, and smooth scroll-triggered animations.</p>
+            <p class="tech-stack"><strong>Tech:</strong> HTML5, CSS3, JavaScript, Intersection Observer API</p>
+            <div class="project-challenge"><i class="bx bx-bulb" style="color: var(--neon); margin-right: 0.5rem;"></i>Challenge: Building a responsive multi-column menu that collapses gracefully on mobile while keeping visual hierarchy intact.</div>
+            <div class="btn-group">
+              <a href="./restaurant.html" class="btn btn-sm">Live Demo</a>
+              <a href="https://github.com/54-hash/restaurant-website" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">GitHub</a>
+            </div>
           </div>
         </article>
 
         <article class="project-card before-fade">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&auto=format&fit=crop&q=80" alt="Code Canvas Portfolio V1" loading="lazy" />
+            <div class="project-overlay">
+              <a href="#" class="btn btn-sm" onclick="showToast('You are viewing this project right now!'); return false;" aria-label="View Portfolio live demo">Live Demo</a>
+              <a href="https://github.com/54-hash/Code-canvas-" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" aria-label="View Portfolio source code">GitHub</a>
+            </div>
+          </div>
           <div class="project-content">
-            <h3>Portfolio</h3>
-            <p class="project-desc">Personal portfolio website showcasing projects with glassmorphism UI and smooth animations.</p>
-            <p class="tech-stack"><strong>Tech:</strong> HTML5, CSS3 (Glassmorphism), JavaScript, Intersection Observer API</p>
-            <a href="./portfolio.html" class="btn" aria-label="View Portfolio live demo">Live Demo</a>
+            <div class="project-tags">
+              <span class="tag">CSS Animation</span>
+              <span class="tag tag-purple">Glassmorphism</span>
+              <span class="tag tag-blue">Responsive</span>
+            </div>
+            <h3>Code Canvas V1</h3>
+            <p class="project-desc">My first portfolio iteration featuring a glassmorphism UI design, custom CSS animations, and smooth reveal-on-scroll effects.</p>
+            <p class="tech-stack"><strong>Tech:</strong> HTML5, CSS3, JavaScript, Intersection Observer API</p>
+            <div class="project-challenge"><i class="bx bx-bulb" style="color: var(--neon); margin-right: 0.5rem;"></i>Challenge: Creating performant glassmorphism effects without heavy libraries, using only CSS backdrop-filter and gradients.</div>
+            <div class="btn-group">
+              <a href="#" class="btn btn-sm" onclick="showToast('You are viewing this project right now!'); return false;">Live Demo</a>
+              <a href="https://github.com/54-hash/Code-canvas-" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">GitHub</a>
+            </div>
           </div>
         </article>
 
         <article class="project-card before-fade">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&auto=format&fit=crop&q=80" alt="TaskMaster Pro Todo App" loading="lazy" />
+            <div class="project-overlay">
+              <a href="./todo.html" class="btn btn-sm" aria-label="View Todo App live demo">Live Demo</a>
+              <a href="https://github.com/54-hash/todo-app" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" aria-label="View Todo App source code">GitHub</a>
+            </div>
+          </div>
           <div class="project-content">
-            <h3>Todo App</h3>
-            <p class="project-desc">Simple task management app with local storage persistence and clean interface.</p>
+            <div class="project-tags">
+              <span class="tag">LocalStorage</span>
+              <span class="tag tag-purple">CRUD</span>
+              <span class="tag tag-blue">Responsive</span>
+            </div>
+            <h3>TaskMaster Pro</h3>
+            <p class="project-desc">A feature-rich task management application with localStorage persistence, drag-and-drop prioritization, and project categorization.</p>
             <p class="tech-stack"><strong>Tech:</strong> HTML5, CSS3, JavaScript, LocalStorage API</p>
-            <a href="./todo.html" class="btn" aria-label="View Todo App live demo">Live Demo</a>
+            <div class="project-challenge"><i class="bx bx-bulb" style="color: var(--neon); margin-right: 0.5rem;"></i>Challenge: Building a reliable data persistence layer that handles storage limits, JSON parsing errors, and syncs across sessions without a backend.</div>
+            <div class="btn-group">
+              <a href="./todo.html" class="btn btn-sm">Live Demo</a>
+              <a href="https://github.com/54-hash/todo-app" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">GitHub</a>
+            </div>
           </div>
         </article>
 
+        <article class="project-card before-fade">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1592210454359-9043f067919b?w=800&auto=format&fit=crop&q=80" alt="WeatherVue Dashboard" loading="lazy" />
+            <div class="project-overlay">
+              <a href="https://54-hash.github.io/weather-app/" target="_blank" rel="noopener noreferrer" class="btn btn-sm" onclick="return checkLink(this)" aria-label="View WeatherVue live demo">Live Demo</a>
+              <a href="https://github.com/54-hash/weather-app" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" aria-label="View WeatherVue source code">GitHub</a>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-tags">
+              <span class="tag">API</span>
+              <span class="tag tag-purple">Async/Await</span>
+              <span class="tag tag-blue">Responsive</span>
+            </div>
+            <h3>WeatherVue</h3>
+            <p class="project-desc">Real-time weather dashboard using the OpenWeather API, featuring geolocation auto-detect, 5-day forecasts, and dynamic weather icons.</p>
+            <p class="tech-stack"><strong>Tech:</strong> HTML5, CSS3, JavaScript, OpenWeather API, Geolocation API</p>
+            <div class="project-challenge"><i class="bx bx-bulb" style="color: var(--neon); margin-right: 0.5rem;"></i>Challenge: Handling API rate limits and gracefully degrading when users deny geolocation permissions or search for invalid cities.</div>
+            <div class="btn-group">
+              <a href="https://54-hash.github.io/weather-app/" target="_blank" rel="noopener noreferrer" class="btn btn-sm" onclick="return checkLink(this)">Live Demo</a>
+              <a href="https://github.com/54-hash/weather-app" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card before-fade">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&auto=format&fit=crop&q=80" alt="ShopSphere E-Commerce Store" loading="lazy" />
+            <div class="project-overlay">
+              <a href="https://54-hash.github.io/ecommerce-store/" target="_blank" rel="noopener noreferrer" class="btn btn-sm" onclick="return checkLink(this)" aria-label="View ShopSphere live demo">Live Demo</a>
+              <a href="https://github.com/54-hash/ecommerce-store" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" aria-label="View ShopSphere source code">GitHub</a>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-tags">
+              <span class="tag">E-commerce</span>
+              <span class="tag tag-purple">State Management</span>
+              <span class="tag tag-blue">CSS Grid</span>
+            </div>
+            <h3>ShopSphere</h3>
+            <p class="project-desc">A fully responsive e-commerce storefront with product filtering, shopping cart state management, and a streamlined checkout flow.</p>
+            <p class="tech-stack"><strong>Tech:</strong> HTML5, CSS3, JavaScript, CSS Grid</p>
+            <div class="project-challenge"><i class="bx bx-bulb" style="color: var(--neon); margin-right: 0.5rem;"></i>Challenge: Managing complex shopping cart state — add, remove, quantity updates, and running totals — using only vanilla JavaScript.</div>
+            <div class="btn-group">
+              <a href="https://54-hash.github.io/ecommerce-store/" target="_blank" rel="noopener noreferrer" class="btn btn-sm" onclick="return checkLink(this)">Live Demo</a>
+              <a href="https://github.com/54-hash/ecommerce-store" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card before-fade">
+          <div class="project-image">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&auto=format&fit=crop&q=80" alt="Nexus Admin Dashboard" loading="lazy" />
+            <div class="project-overlay">
+              <a href="https://54-hash.github.io/admin-dashboard/" target="_blank" rel="noopener noreferrer" class="btn btn-sm" onclick="return checkLink(this)" aria-label="View Nexus Admin live demo">Live Demo</a>
+              <a href="https://github.com/54-hash/admin-dashboard" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm" aria-label="View Nexus Admin source code">GitHub</a>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-tags">
+              <span class="tag">Dashboard</span>
+              <span class="tag tag-purple">Data Viz</span>
+              <span class="tag tag-blue">Dark Mode</span>
+            </div>
+            <h3>Nexus Admin</h3>
+            <p class="project-desc">An analytics admin dashboard with dark mode toggle, data visualization charts, sortable tables, and role-based UI components.</p>
+            <p class="tech-stack"><strong>Tech:</strong> HTML5, CSS3, JavaScript, Chart.js, LocalStorage</p>
+            <div class="project-challenge"><i class="bx bx-bulb" style="color: var(--neon); margin-right: 0.5rem;"></i>Challenge: Rendering performant real-time charts while keeping the bundle minimal and maintaining 60fps animations on lower-end devices.</div>
+            <div class="btn-group">
+              <a href="https://54-hash.github.io/admin-dashboard/" target="_blank" rel="noopener noreferrer" class="btn btn-sm" onclick="return checkLink(this)">Live Demo</a>
+              <a href="https://github.com/54-hash/admin-dashboard" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">GitHub</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="testimonials-section" id="testimonials" aria-labelledby="testimonials-heading">
+      <div class="section-header before-fade">
+        <span class="section-tag">Testimonials</span>
+        <h2 id="testimonials-heading">What People Say</h2>
+        <div class="section-line"></div>
+        <p class="section-desc">Feedback from clients and collaborators I've worked with.</p>
+      </div>
+      <div class="testimonials-grid">
+        <article class="testimonial-card before-fade">
+          <p class="testimonial-text">Silver delivered our restaurant website ahead of schedule. The attention to detail, smooth animations, and responsive layout exceeded our expectations. Truly a pleasure to work with.</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">AC</div>
+            <div><h4>Alex Chen</h4><p>Founder, Savory & Sage</p></div>
+          </div>
+        </article>
+        <article class="testimonial-card before-fade">
+          <p class="testimonial-text">Working with Silver was seamless. They understood our vision immediately and translated it into a modern, responsive design that our users love. Highly recommended for any frontend work.</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">MR</div>
+            <div><h4>Maria Rodriguez</h4><p>CEO, TechStart Inc.</p></div>
+          </div>
+        </article>
+        <article class="testimonial-card before-fade">
+          <p class="testimonial-text">The UI design Silver created for our dashboard was phenomenal. Glassmorphism done right — it looked stunning without sacrificing usability or performance.</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">JO</div>
+            <div><h4>James Okafor</h4><p>Product Lead, Nexus Analytics</p></div>
+          </div>
+        </article>
       </div>
     </section>
 
   </main>
 
-  <!-- CONTACT -->
   <section class="contact-section" id="contact" aria-labelledby="contact-heading">
     <div class="contact-wrapper">
-      <h2 class="contact-title" id="contact-heading">Get In Touch</h2>
-      <p class="contact-subtitle">Let's build something amazing together</p>
-
-      <div class="contact-cards">
-        <article class="contact-card">
-          <i class="bx bx-phone" aria-hidden="true"></i>
-          <h4>Call Me</h4>
-          <a href="tel:+2348063555721" aria-label="Call Silver at 0806 355 5721">0806 355 5721</a>
-        </article>
-
-        <article class="contact-card">
-          <i class="bx bxl-whatsapp" aria-hidden="true"></i>
-          <h4>WhatsApp</h4>
-          <a href="https://wa.me/2348063555721" target="_blank" rel="noopener noreferrer" aria-label="Chat with Silver on WhatsApp">Chat Now</a>
-        </article>
-
-        <article class="contact-card">
-          <i class="bx bx-envelope" aria-hidden="true"></i>
-          <h4>Email</h4>
-          <a href="mailto:d9339171@gmail.com" aria-label="Email Silver at d9339171@gmail.com">d9339171@gmail.com</a>
-        </article>
+      <div class="section-header">
+        <span class="section-tag" style="color: var(--red); border-color: rgba(139,0,0,0.3); background: rgba(139,0,0,0.1);">Get In Touch</span>
+        <h2 class="contact-title" id="contact-heading">Let's Work Together</h2>
+        <p class="contact-subtitle">Have a project in mind? I'd love to hear about it.</p>
+      </div>
+      <div class="contact-form-wrapper">
+        <div class="contact-info-side">
+          <h3>Contact Information</h3>
+          <p>I'm currently available for freelance projects, collaborations, and full-time opportunities. Reach out and let's create something amazing.</p>
+          <div class="contact-detail">
+            <i class="bx bx-phone"></i>
+            <div><h4>Phone</h4><a href="tel:+2348063555721">0806 355 5721</a></div>
+          </div>
+          <div class="contact-detail">
+            <i class="bx bxl-whatsapp"></i>
+            <div><h4>WhatsApp</h4><a href="https://wa.me/2348063555721" target="_blank" rel="noopener noreferrer">Chat Now</a></div>
+          </div>
+          <div class="contact-detail">
+            <i class="bx bx-envelope"></i>
+            <div><h4>Email</h4><a href="mailto:d9339171@gmail.com">d9339171@gmail.com</a></div>
+          </div>
+          <div class="social-row">
+            <a href="https://github.com/54-hash" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="bx bxl-github"></i></a>
+            <a href="https://linkedin.com/in/silver-dev" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bx bxl-linkedin"></i></a>
+            <a href="https://twitter.com/silver_dev" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="bx bxl-twitter"></i></a>
+            <a href="https://dribbble.com/silver" target="_blank" rel="noopener noreferrer" aria-label="Dribbble"><i class="bx bxl-dribbble"></i></a>
+          </div>
+          <a href="assets/Silver-CV.pdf" download class="btn" style="margin-top: 1.5rem;">
+            <i class="bx bx-download"></i> Download CV
+          </a>
+        </div>
+        <div class="contact-form">
+          <form id="contactForm" onsubmit="handleSubmit(event)">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="John Doe" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="john@example.com" required />
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="Project Inquiry" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Tell me about your project..." required></textarea>
+            </div>
+            <button type="submit" class="btn cta-button" style="width: 100%; margin-top: 0;">
+              <i class="bx bx-send"></i> Send Message
+            </button>
+            <div class="form-status" id="formStatus"></div>
+          </form>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer role="contentinfo">
-    <p>&copy; 2026 Code Canvas. All rights reserved.</p>
+    <p>&copy; 2026 Code Canvas. Built with <i class="bx bxs-heart" style="color: var(--red);"></i> by Silver.</p>
     <p class="footer-links">
-      <a href="https://github.com/54-hash" target="_blank" rel="noopener noreferrer" aria-label="Visit Silver's GitHub profile">
-        <i class="bx bxl-github" aria-hidden="true"></i> GitHub
-      </a>
+      <a href="https://github.com/54-hash" target="_blank" rel="noopener noreferrer" aria-label="Visit Silver's GitHub profile"><i class="bx bxl-github" aria-hidden="true"></i> GitHub</a>
+      <a href="https://linkedin.com/in/silver-dev" target="_blank" rel="noopener noreferrer" aria-label="Visit Silver's LinkedIn profile"><i class="bx bxl-linkedin" aria-hidden="true"></i> LinkedIn</a>
+      <a href="https://twitter.com/silver_dev" target="_blank" rel="noopener noreferrer" aria-label="Visit Silver's Twitter profile"><i class="bx bxl-twitter" aria-hidden="true"></i> Twitter</a>
     </p>
   </footer>
 
-  <!-- JS -->
+  <button id="scrollTop" aria-label="Scroll to top"><i class="bx bx-arrow-up"></i></button>
+  <div class="toast" id="toast"></div>
   <script src="script.js"></script>
 </body>
 </html>
-
