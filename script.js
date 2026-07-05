@@ -1,5 +1,4 @@
 // ===== PERFORMANCE: Defer non-critical operations =====
-// Use requestAnimationFrame for smooth animations without blocking main thread
 
 // Mobile menu toggle
 const menuToggle = document.getElementById('menu-toggle');
@@ -12,7 +11,7 @@ if (menuToggle && navLinks) {
     });
 }
 
-// Smooth scrolling for navigation links
+// Smooth scrolling for navigation links + active state tracking
 const navAnchors = document.querySelectorAll('nav a[href^="#"]');
 
 navAnchors.forEach(anchor => {
@@ -42,8 +41,33 @@ navAnchors.forEach(anchor => {
     });
 });
 
+// Active section highlighting on scroll
+const sections = document.querySelectorAll('section[id]');
+
+function updateActiveNav() {
+    const scrollPos = window.scrollY + 150;
+
+    sections.forEach(section => {
+        const top = section.offsetTop;
+        const height = section.offsetHeight;
+        const id = section.getAttribute('id');
+
+        if (scrollPos >= top && scrollPos < top + height) {
+            navAnchors.forEach(link => {
+                link.removeAttribute('aria-current');
+                if (link.getAttribute('href') === '#' + id) {
+                    link.setAttribute('aria-current', 'page');
+                }
+            });
+        }
+    });
+}
+
+window.addEventListener('scroll', () => {
+    requestAnimationFrame(updateActiveNav);
+}, { passive: true });
+
 // Intersection Observer for scroll-triggered fade-in animations
-// PERFORMANCE: Use rootMargin to start loading slightly before visible
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -52,29 +76,25 @@ const observerOptions = {
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            // Use requestAnimationFrame for smooth rendering
             requestAnimationFrame(() => {
                 entry.target.classList.add('fade-in');
             });
-            // Unobserve after animation to improve performance
             observer.unobserve(entry.target);
         }
     });
 }, observerOptions);
 
-// Observe all elements with the 'before-fade' class
 const fadeElements = document.querySelectorAll('.before-fade');
 fadeElements.forEach(el => observer.observe(el));
 
 // PERFORMANCE: Parallax effect using passive event listener
-// and requestAnimationFrame to avoid jank
 let ticking = false;
 
 function updateParallax() {
     const heroImg = document.querySelector('.hero-img');
     if (heroImg) {
         const scrolled = window.pageYOffset;
-        const rate = scrolled * -0.3; // Reduced rate for better performance
+        const rate = scrolled * -0.3;
         heroImg.style.transform = `translateY(${rate}px)`;
     }
     ticking = false;
@@ -87,18 +107,17 @@ window.addEventListener('scroll', () => {
     }
 }, { passive: true });
 
-// PERFORMANCE: Lazy load images that are below the fold
-// (profile.jpg is eager-loaded since it's in hero, but this is good practice for future images)
+// PERFORMANCE: Lazy load images
 if ('loading' in HTMLImageElement.prototype) {
-    // Browser supports native lazy loading
     const lazyImages = document.querySelectorAll('img[loading="lazy"]');
     lazyImages.forEach(img => {
-        img.src = img.dataset.src;
+        if (img.dataset.src) {
+            img.src = img.dataset.src;
+        }
     });
 }
 
-// PERFORMANCE: Preload critical resources hint
-// Add preload for profile.jpg if it's critical
+// Preload critical resources
 const preloadLink = document.createElement('link');
 preloadLink.rel = 'preload';
 preloadLink.as = 'image';
@@ -120,7 +139,6 @@ let resizeTimeout;
 window.addEventListener('resize', () => {
     clearTimeout(resizeTimeout);
     resizeTimeout = setTimeout(() => {
-        // Close mobile menu on resize to desktop
         if (window.innerWidth > 768 && navLinks) {
             navLinks.classList.remove('active');
             menuToggle.setAttribute('aria-expanded', 'false');
@@ -128,6 +146,7 @@ window.addEventListener('resize', () => {
     }, 250);
 });
 
-// Console greeting for developers
+// Console greeting
 console.log('%c Code Canvas ', 'background: #00ff9c; color: #000; font-size: 20px; font-weight: bold; padding: 10px; border-radius: 8px;');
 console.log('%c Welcome to my portfolio! Feel free to explore the code. ', 'color: #00ff9c; font-size: 14px;');
+                                          
