@@ -26,12 +26,10 @@ navAnchors.forEach(anchor => {
                 block: 'start'
             });
 
-            // Update aria-current for accessibility
             navAnchors.forEach(link => link.removeAttribute('aria-current'));
             this.setAttribute('aria-current', 'page');
         }
 
-        // Close mobile menu after clicking a link
         if (navLinks) {
             navLinks.classList.remove('active');
         }
@@ -87,7 +85,7 @@ const observer = new IntersectionObserver((entries) => {
 const fadeElements = document.querySelectorAll('.before-fade');
 fadeElements.forEach(el => observer.observe(el));
 
-// PERFORMANCE: Parallax effect using passive event listener
+// PERFORMANCE: Parallax effect
 let ticking = false;
 
 function updateParallax() {
@@ -125,7 +123,7 @@ preloadLink.href = 'profile.jpg';
 preloadLink.type = 'image/jpeg';
 document.head.appendChild(preloadLink);
 
-// Accessibility: Handle Escape key to close mobile menu
+// Accessibility: Handle Escape key
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && navLinks && navLinks.classList.contains('active')) {
         navLinks.classList.remove('active');
@@ -134,7 +132,7 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
-// PERFORMANCE: Debounce resize events
+// PERFORMANCE: Debounce resize
 let resizeTimeout;
 window.addEventListener('resize', () => {
     clearTimeout(resizeTimeout);
@@ -149,4 +147,4 @@ window.addEventListener('resize', () => {
 // Console greeting
 console.log('%c Code Canvas ', 'background: #00ff9c; color: #000; font-size: 20px; font-weight: bold; padding: 10px; border-radius: 8px;');
 console.log('%c Welcome to my portfolio! Feel free to explore the code. ', 'color: #00ff9c; font-size: 14px;');
-                                          
+            
